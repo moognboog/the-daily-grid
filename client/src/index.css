@@ -12,3 +12,14 @@
 .font-timesnow {
   font-family: 'Timesnow', serif;
 }
+
+@font-face {
+  font-family: 'Mermaid';
+  src: url('/fonts/Mermaid1001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-mermaid {
+  font-family: 'Mermaid', serif;
+}

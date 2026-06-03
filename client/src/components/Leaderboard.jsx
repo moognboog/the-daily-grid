@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fmt } from '../utils/format.js';
+import { fmt, fmtDate } from '../utils/format.js';
 
 const MEDALS = ['🥇', '🥈', '🥉'];
 
@@ -16,7 +16,7 @@ export default function Leaderboard({ playerId, date }) {
   return (
     <div className="w-full max-w-md mx-auto">
       <h2 className="text-xl font-bold text-gray-800 mb-1">Today's Leaderboard</h2>
-      <p className="text-sm text-gray-500 mb-4">{date}</p>
+      <p className="text-sm text-gray-500 mb-4 font-mermaid">{date ? fmtDate(date) : ''}</p>
 
       {scores === null ? (
         <p className="text-gray-400">Loading...</p>
