@@ -1,3 +1,8 @@
+function fmtDate(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return `${m}/${d}/${y}`;
+}
+
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60).toString().padStart(2, '0');
   const s = (seconds % 60).toString().padStart(2, '0');
@@ -26,7 +31,7 @@ async function postLeaderboard(scores, dateStr) {
     embeds: [
       {
         title: `Daily Crossword Leaderboard`,
-        description: `📅 ${dateStr}\n\n${description}`,
+        description: `📅 ${fmtDate(dateStr)}\n\n${description}`,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
       },
