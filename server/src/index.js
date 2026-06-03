@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/health', (_req, res) => {
-  const distPath = join(dirname(fileURLToPath(import.meta.url)), '../../../client/dist');
+  const distPath = join(dirname(fileURLToPath(import.meta.url)), '../../client/dist');
   res.json({ ok: true, distPath, distExists: existsSync(distPath), cwd: process.cwd() });
 });
 
@@ -27,7 +27,7 @@ app.use('/api/scores', scoresRouter);
 
 // Serve the built React frontend in production
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const clientDist = join(__dirname, '../../../client/dist');
+const clientDist = join(__dirname, '../../client/dist');
 if (existsSync(clientDist)) {
   app.use(express.static(clientDist));
   app.get('*', (_req, res) => res.sendFile(join(clientDist, 'index.html')));
