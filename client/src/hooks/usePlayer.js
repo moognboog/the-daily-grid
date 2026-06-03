@@ -27,7 +27,9 @@ function initPlayer() {
   }
 
   const stored = getPlayer();
-  return stored?.id ? stored : null;
+  // Discord IDs are numeric Snowflakes; old UUID sessions have dashes — reject them
+  if (stored?.id && /^\d+$/.test(stored.id)) return stored;
+  return null;
 }
 
 export function usePlayer() {
