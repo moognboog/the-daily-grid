@@ -9,12 +9,11 @@ export function fmt(s) {
   return `${m}:${sec}`;
 }
 
-/**
- * Produce a stable string key for a grid cell.
- * @param {number} r - row index
- * @param {number} c - column index
- * @returns {string}
- */
 export function cellKey(r, c) {
   return `${r},${c}`;
+}
+
+export function fmtDate(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }

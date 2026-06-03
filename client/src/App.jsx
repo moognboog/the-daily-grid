@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { fmt } from './utils/format.js';
+import { fmt, fmtDate } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
 import { getCompletedToday, markCompleted, updateStreak, getAverageTime } from './utils/storage.js';
@@ -115,7 +115,7 @@ export default function App() {
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
         <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-sm text-center">
           <p className="text-xs text-gray-400 uppercase tracking-widest mb-1 font-timesnow">The Daily Grid</p>
-          <h1 className="text-3xl font-bold text-gray-800 mb-1">{puzzle.date}</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-1">{fmtDate(puzzle.date)}</h1>
           <p className="text-sm text-gray-500 mb-8">
             {puzzle.words.length} words &nbsp;·&nbsp; {puzzle.rows}×{puzzle.cols} grid
           </p>
@@ -181,7 +181,7 @@ export default function App() {
         <div className="relative flex items-center justify-between mb-4">
           <div>
             <h1 className="text-xl font-bold text-gray-800 font-timesnow">The Daily Grid</h1>
-            <p className="text-xs text-gray-400">{puzzle?.date}</p>
+            <p className="text-xs text-gray-400">{puzzle ? fmtDate(puzzle.date) : ''}</p>
           </div>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Timer elapsed={elapsedSeconds} />
