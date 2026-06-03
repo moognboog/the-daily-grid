@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { fmt } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
-import { getCompletedToday, markCompleted, updateStreak } from './utils/storage.js';
+import { getCompletedToday, markCompleted, updateStreak, getAverageTime } from './utils/storage.js';
 import NameModal from './components/NameModal.jsx';
 import CrosswordGrid from './components/CrosswordGrid.jsx';
 import ClueList from './components/ClueList.jsx';
@@ -32,6 +32,7 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [copied, setCopied] = useState(false);
   const autoRedirected = useRef(false);
 
   const alreadyDone = puzzle ? getCompletedToday(puzzle.date) : null;
@@ -45,6 +46,21 @@ export default function App() {
       setShowLeaderboard(true);
     }
   }, [alreadyDone]);
+
+  async function handleShare() {
+    const time = alreadyDone ? alreadyDone.timeSeconds : elapsedSeconds;
+    const [y, m, d] = puzzle.date.split('-');
+    const text = [
+      `✏️${m}/${d}/${y}✏️`,
+      `${player.name}'s Time: ${fmt(time)}`,
+      `🔥${player.streak ?? 0} | Avg. Time: ${fmt(getAverageTime())}`,
+      ``,
+      `https://the-daily-grid.com`,
+    ].join('\n');
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
 
   async function handleSubmit() {
     if (!player || !puzzle || submitting) return;
@@ -112,12 +128,22 @@ export default function App() {
 
         <Leaderboard playerId={player?.id} date={puzzle?.date} />
 
-        <button
-          onClick={() => setShowLeaderboard(false)}
-          className="mt-6 px-5 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium"
-        >
-          ← Back to Puzzle
-        </button>
+        <div className="mt-6 flex gap-3">
+          {puzzleDone && (
+            <button
+              onClick={handleShare}
+              className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+            >
+              {copied ? '✓ Copied!' : 'Share Result'}
+            </button>
+          )}
+          <button
+            onClick={() => setShowLeaderboard(false)}
+            className="px-5 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium"
+          >
+            ← Back to Puzzle
+          </button>
+        </div>
       </div>
     );
   }

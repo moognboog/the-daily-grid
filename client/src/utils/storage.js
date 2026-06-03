@@ -36,6 +36,15 @@ export function markCompleted(dateStr, timeSeconds) {
   }
 }
 
+export function getAverageTime() {
+  const dates = getCompletedDates();
+  const times = Object.values(dates)
+    .map(d => d.timeSeconds)
+    .filter(t => typeof t === 'number' && t > 0);
+  if (times.length === 0) return 0;
+  return Math.round(times.reduce((a, b) => a + b, 0) / times.length);
+}
+
 export function updateStreak(dateStr) {
   const player = getPlayer();
   if (!player) return;
