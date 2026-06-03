@@ -150,7 +150,7 @@ export default function App() {
 
         <Leaderboard playerId={player?.id} date={puzzle?.date} />
 
-        <div className="mt-6 flex gap-3">
+        <div className="mt-6 flex flex-col gap-3 items-center">
           {puzzleDone && (
             <button
               onClick={handleShare}
