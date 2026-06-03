@@ -25,6 +25,7 @@ model Puzzle {
   rows      Int
   cols      Int
   wordsJson String
+  position  Int      @default(0)
   createdAt DateTime @default(now())
 }
 

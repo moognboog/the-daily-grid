@@ -17,14 +17,14 @@ export async function getPuzzle(dateStr) {
   // Date-pinned puzzles take priority over the rotation
   let row = await prisma.puzzle.findFirst({
     where: { date: dateStr },
-    orderBy: { id: 'asc' },
+    orderBy: { position: 'asc' },
   });
 
   // Fall back to rotating pool (excludes date-pinned entries)
   if (!row) {
     const pool = await prisma.puzzle.findMany({
       where: { date: null },
-      orderBy: { id: 'asc' },
+      orderBy: { position: 'asc' },
     });
     if (pool.length === 0) {
       // All puzzles are pinned — fall back to any puzzle

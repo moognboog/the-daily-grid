@@ -29,6 +29,7 @@ export default function App() {
     inputRef, selectCell, selectWord, handleKey,
   } = usePuzzle();
 
+  const [gameStarted, setGameStarted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
@@ -104,6 +105,27 @@ export default function App() {
     return (
       <div className="min-h-screen flex items-center justify-center text-red-500">
         Failed to load puzzle: {error}
+      </div>
+    );
+  }
+
+  // Ready screen — shown once when a fresh puzzle loads (skip if already completed)
+  if (puzzle && !gameStarted && !puzzleDone) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
+        <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-sm text-center">
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Daily Crossword</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-1">{puzzle.date}</h1>
+          <p className="text-sm text-gray-500 mb-8">
+            {puzzle.words.length} words &nbsp;·&nbsp; {puzzle.rows}×{puzzle.cols} grid
+          </p>
+          <button
+            onClick={() => setGameStarted(true)}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors text-lg"
+          >
+            Start Puzzle
+          </button>
+        </div>
       </div>
     );
   }

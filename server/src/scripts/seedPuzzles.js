@@ -9,7 +9,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const puzzlesPath = join(__dirname, '../../data/puzzles.json');
 
 function assignNumbers(words) {
-  // Sort by startRow then startCol — standard crossword scan order
   const sorted = [...words].sort((a, b) =>
     a.startRow !== b.startRow ? a.startRow - b.startRow : a.startCol - b.startCol
   );
@@ -32,25 +31,55 @@ function assignNumbers(words) {
   }));
 }
 
+// Fisher-Yates shuffle (in-place)
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 async function seed() {
   const raw = JSON.parse(readFileSync(puzzlesPath, 'utf8'));
 
-  // Clear and re-insert puzzles so IDs stay stable for the rotation
+  // Give untitled puzzles a generated title so position tracking works
+  raw.forEach((p, i) => { if (!p.title) p.title = `Puzzle ${i + 1}`; });
+
+  // Save existing title → position before clearing
+  const existing = await prisma.puzzle.findMany();
+  const positionByTitle = new Map(
+    existing
+      .filter(p => p.title && p.position != null)
+      .map(p => [p.title, p.position])
+  );
+
+  // Find puzzles that are new (no existing position) and assign them positions
+  const newPuzzles = raw.filter(p => !positionByTitle.has(p.title));
+  const maxPos = positionByTitle.size > 0
+    ? Math.max(...positionByTitle.values())
+    : -1;
+
+  // Shuffle new puzzles so they land in random order at the end of the cycle
+  shuffle(newPuzzles);
+  newPuzzles.forEach((p, i) => positionByTitle.set(p.title, maxPos + 1 + i));
+
+  // Clear and re-insert with stable positions
   await prisma.puzzle.deleteMany();
 
   for (const p of raw) {
     const words = assignNumbers(p.words);
     await prisma.puzzle.create({
       data: {
-        title: p.title ?? null,
+        title: p.title,
         date: p.date ?? null,
         rows: p.rows,
         cols: p.cols,
         wordsJson: JSON.stringify(words),
+        position: positionByTitle.get(p.title) ?? 0,
       },
     });
 
-    // Populate the word bank — upsert so re-seeding is safe
     for (const w of words) {
       await prisma.wordClue.upsert({
         where: { word_clue: { word: w.answer, clue: w.clue } },
@@ -63,6 +92,10 @@ async function seed() {
   const puzzleCount = await prisma.puzzle.count();
   const wordCount = await prisma.wordClue.count();
   console.log(`[seed] ${puzzleCount} puzzle(s) loaded, ${wordCount} word/clue pair(s) in bank`);
+  console.log(`[seed] Rotation order:`);
+  const ordered = await prisma.puzzle.findMany({ where: { date: null }, orderBy: { position: 'asc' } });
+  ordered.forEach(p => console.log(`  [${p.position}] ${p.title}`));
+
   await prisma.$disconnect();
 }
 
