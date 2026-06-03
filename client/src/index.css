@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Timesnow';
+  src: url('/fonts/Timesnow.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-timesnow {
+  font-family: 'Timesnow', serif;
+}
