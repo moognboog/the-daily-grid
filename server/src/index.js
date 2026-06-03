@@ -2,21 +2,22 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import cron from 'node-cron';
-import { PrismaClient } from '@prisma/client';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync } from 'fs';
+import prisma from './lib/prisma.js';
 import puzzleRouter from './routes/puzzle.js';
 import scoresRouter from './routes/scores.js';
 import { getTodayString } from './lib/puzzleStore.js';
 import { postLeaderboard } from './lib/discord.js';
 
 const app = express();
-const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/health', (_req, res) => res.json({ ok: true }));
 
 app.use('/api/puzzle', puzzleRouter);
 app.use('/api/scores', scoresRouter);

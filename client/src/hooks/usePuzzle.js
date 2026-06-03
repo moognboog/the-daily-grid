@@ -1,8 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-
-function cellKey(r, c) {
-  return `${r},${c}`;
-}
+import { cellKey } from '../utils/format.js';
 
 function buildGrid(rows, cols, words) {
   const grid = Array.from({ length: rows }, () =>
@@ -49,6 +46,7 @@ export function usePuzzle() {
   const [cursorCell, setCursorCell] = useState(null);
   const [timerStarted, setTimerStarted] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const inputRef = useRef(null);
@@ -70,6 +68,14 @@ export function usePuzzle() {
         setLoading(false);
       });
   }, []);
+
+  useEffect(() => {
+    if (!timerStarted || isComplete) return;
+    const id = setInterval(() => {
+      setElapsedSeconds(s => s + 1);
+    }, 1000);
+    return () => clearInterval(id);
+  }, [timerStarted, isComplete]);
 
   const moveInWord = useCallback((row, col, wordIndex, delta, words) => {
     const word = words[wordIndex];
@@ -165,6 +171,7 @@ export function usePuzzle() {
     cursorCell,
     timerStarted,
     isComplete,
+    elapsedSeconds,
     loading,
     error,
     inputRef,

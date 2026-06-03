@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { fmt } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
 import { getCompletedToday, markCompleted, updateStreak } from './utils/storage.js';
@@ -20,21 +21,14 @@ function buildAnswerInputs(words) {
   return map;
 }
 
-function fmt(s) {
-  const m = Math.floor(s / 60).toString().padStart(2, '0');
-  const sec = (s % 60).toString().padStart(2, '0');
-  return `${m}:${sec}`;
-}
-
 export default function App() {
   const { player, needsName, setName, refreshPlayer } = usePlayer();
   const {
     puzzle, grid, inputs, selectedWord, cursorCell,
-    timerStarted, isComplete, loading, error,
+    timerStarted, isComplete, elapsedSeconds, loading, error,
     inputRef, selectCell, selectWord, handleKey,
   } = usePuzzle();
 
-  const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
@@ -149,11 +143,7 @@ export default function App() {
               Leaderboard →
             </button>
             <div className="text-right">
-              <Timer
-                started={timerStarted}
-                stopped={isComplete || readonly}
-                onTick={setElapsedSeconds}
-              />
+              <Timer elapsed={elapsedSeconds} />
               {player && (
                 <p className="text-xs text-gray-400">
                   {player.name} · Streak {player.streak ?? 0}

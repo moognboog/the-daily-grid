@@ -1,14 +1,16 @@
 import { Router } from 'express';
-import { PrismaClient } from '@prisma/client';
+import prisma from '../lib/prisma.js';
 import { getTodayString } from '../lib/puzzleStore.js';
 
 const router = Router();
-const prisma = new PrismaClient();
 
 router.post('/', async (req, res) => {
   const { playerId, playerName, timeSeconds, date } = req.body;
   if (!playerId || !playerName || timeSeconds == null || !date) {
     return res.status(400).json({ error: 'Missing required fields' });
+  }
+  if (!Number.isInteger(timeSeconds) || timeSeconds <= 0 || timeSeconds > 3600) {
+    return res.status(400).json({ error: 'timeSeconds must be a positive integer no greater than 3600' });
   }
 
   try {

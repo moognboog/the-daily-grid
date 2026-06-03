@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
-
-function cellKey(r, c) {
-  return `${r},${c}`;
-}
+import { useState, useEffect } from 'react';
+import { cellKey } from '../utils/format.js';
 
 export default function CrosswordGrid({ grid, inputs, selectedWord, cursorCell, puzzle, inputRef, selectCell, handleKey }) {
+  const [windowWidth, setWindowWidth] = useState(() => window.innerWidth);
+
   useEffect(() => {
     inputRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   if (!grid || !puzzle) return null;
@@ -27,7 +34,7 @@ export default function CrosswordGrid({ grid, inputs, selectedWord, cursorCell, 
     return cursorCell && cursorCell.row === r && cursorCell.col === c;
   }
 
-  const cellSize = Math.min(Math.floor((Math.min(window.innerWidth, 560) - 16) / cols), 42);
+  const cellSize = Math.min(Math.floor((Math.min(windowWidth, 560) - 16) / cols), 42);
 
   return (
     <div className="relative">
