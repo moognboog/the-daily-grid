@@ -29,6 +29,21 @@ app.use('/api/scores', scoresRouter);
 app.use('/api/leaderboard', leaderboardRouter);
 app.use('/auth', authRouter);
 
+app.post('/api/admin/post-leaderboard', async (req, res) => {
+  const secret = process.env.ADMIN_SECRET;
+  if (!secret || req.headers['x-admin-secret'] !== secret) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  const dateStr = getTodayString();
+  const scores = await prisma.score.findMany({
+    where: { date: dateStr },
+    orderBy: { timeSeconds: 'asc' },
+    select: { playerName: true, timeSeconds: true },
+  });
+  await postLeaderboard(scores, dateStr);
+  res.json({ ok: true, date: dateStr, scores: scores.length });
+});
+
 // Serve the built React frontend in production
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const clientDist = join(__dirname, '../../client/dist');
