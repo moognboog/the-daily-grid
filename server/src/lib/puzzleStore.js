@@ -2,10 +2,16 @@ import prisma from './prisma.js';
 
 const puzzleCache = new Map();
 
+function mtDateString(date) {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(date);
+}
+
 export function getTodayString() {
-  return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/Denver',
-  }).format(new Date());
+  return mtDateString(new Date());
+}
+
+export function getYesterdayString() {
+  return mtDateString(new Date(Date.now() - 86400000));
 }
 
 export async function getPuzzle(dateStr) {
@@ -47,5 +53,8 @@ export async function getPuzzle(dateStr) {
   };
 
   puzzleCache.set(dateStr, puzzle);
+  if (puzzleCache.size > 3) {
+    puzzleCache.delete(puzzleCache.keys().next().value);
+  }
   return puzzle;
 }

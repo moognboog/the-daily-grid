@@ -12,6 +12,9 @@ router.post('/', async (req, res) => {
   if (!Number.isInteger(timeSeconds) || timeSeconds <= 0 || timeSeconds > 3600) {
     return res.status(400).json({ error: 'timeSeconds must be a positive integer no greater than 3600' });
   }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return res.status(400).json({ error: 'date must be in YYYY-MM-DD format' });
+  }
 
   try {
     await prisma.score.upsert({

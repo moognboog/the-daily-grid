@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { fmt, fmtDate } from './utils/format.js';
+import { fmt, fmtDate, cellKey } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
 import { getCompletedToday, markCompleted, updateStreak, getAverageTime } from './utils/storage.js';
@@ -15,7 +15,7 @@ function buildAnswerInputs(words) {
     for (let i = 0; i < word.answer.length; i++) {
       const r = word.direction === 'down' ? word.startRow + i : word.startRow;
       const c = word.direction === 'across' ? word.startCol + i : word.startCol;
-      map[`${r},${c}`] = word.answer[i];
+      map[cellKey(r, c)] = word.answer[i];
     }
   });
   return map;

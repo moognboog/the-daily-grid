@@ -25,10 +25,14 @@ export default function Leaderboard({ playerId, date }) {
 
   useEffect(() => {
     if (data[activeTab] !== null) return;
-    fetch(`/api/leaderboard/${activeTab}`)
+    const controller = new AbortController();
+    fetch(`/api/leaderboard/${activeTab}`, { signal: controller.signal })
       .then(r => r.json())
       .then(rows => setData(prev => ({ ...prev, [activeTab]: rows })))
-      .catch(() => setData(prev => ({ ...prev, [activeTab]: [] })));
+      .catch(err => {
+        if (err.name !== 'AbortError') setData(prev => ({ ...prev, [activeTab]: [] }));
+      });
+    return () => controller.abort();
   }, [activeTab]);
 
   const rows = data[activeTab];

@@ -1,8 +1,3 @@
-/**
- * Format a duration in seconds as MM:SS.
- * @param {number} s - elapsed seconds
- * @returns {string}
- */
 export function fmt(s) {
   const m = Math.floor(s / 60).toString().padStart(2, '0');
   const sec = (s % 60).toString().padStart(2, '0');

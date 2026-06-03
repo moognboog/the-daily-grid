@@ -1,6 +1,24 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { cellKey } from '../utils/format.js';
 
+function wordCellCoord(word, pos) {
+  return word.direction === 'across'
+    ? { row: word.startRow, col: word.startCol + pos }
+    : { row: word.startRow + pos, col: word.startCol };
+}
+
+function wordPosOf(word, row, col) {
+  return word.direction === 'across' ? col - word.startCol : row - word.startRow;
+}
+
+function findNextEmptyInWord(word, fromPos, inputs) {
+  for (let pos = fromPos + 1; pos < word.answer.length; pos++) {
+    const { row, col } = wordCellCoord(word, pos);
+    if (!inputs[cellKey(row, col)]) return { row, col };
+  }
+  return null;
+}
+
 function buildGrid(rows, cols, words) {
   const grid = Array.from({ length: rows }, () =>
     Array.from({ length: cols }, () => ({
@@ -12,14 +30,12 @@ function buildGrid(rows, cols, words) {
   );
 
   words.forEach((word, wi) => {
-    const { startRow, startCol, direction, answer, number } = word;
-    for (let i = 0; i < answer.length; i++) {
-      const r = direction === 'across' ? startRow : startRow + i;
-      const c = direction === 'across' ? startCol + i : startCol;
+    for (let i = 0; i < word.answer.length; i++) {
+      const { row: r, col: c } = wordCellCoord(word, i);
       grid[r][c].isBlack = false;
-      grid[r][c].answer = answer[i];
+      grid[r][c].answer = word.answer[i];
       grid[r][c].wordIndices.push(wi);
-      if (i === 0) grid[r][c].number = number;
+      if (i === 0) grid[r][c].number = word.number;
     }
   });
 
@@ -80,12 +96,9 @@ export function usePuzzle() {
   const moveInWord = useCallback((row, col, wordIndex, delta, words) => {
     const word = words[wordIndex];
     if (!word) return { row, col };
-    const pos = word.direction === 'across' ? col - word.startCol : row - word.startRow;
-    const nextPos = pos + delta;
+    const nextPos = wordPosOf(word, row, col) + delta;
     if (nextPos < 0 || nextPos >= word.answer.length) return { row, col };
-    return word.direction === 'across'
-      ? { row, col: word.startCol + nextPos }
-      : { row: word.startRow + nextPos, col };
+    return wordCellCoord(word, nextPos);
   }, []);
 
   const selectCell = useCallback((row, col) => {
@@ -99,8 +112,7 @@ export function usePuzzle() {
 
     if (wordIndices.includes(selectedWord)) {
       if (wordIndices.length > 1) {
-        const other = wordIndices.find(i => i !== selectedWord);
-        setSelectedWord(other);
+        setSelectedWord(wordIndices.find(i => i !== selectedWord));
       }
     } else {
       setSelectedWord(wordIndices[0]);
@@ -125,11 +137,9 @@ export function usePuzzle() {
     const { row, col } = cursorCell;
     const word = puzzle.words[selectedWord];
     if (!word) return;
-    const { direction } = word;
 
     if (/^[a-zA-Z]$/.test(pressedKey)) {
-      const ck = cellKey(row, col);
-      const updated = { ...inputs, [ck]: pressedKey.toUpperCase() };
+      const updated = { ...inputs, [cellKey(row, col)]: pressedKey.toUpperCase() };
       setInputs(updated);
 
       if (checkComplete(updated, grid)) {
@@ -137,22 +147,10 @@ export function usePuzzle() {
         return;
       }
 
-      // Find the next empty cell in this word after the current position
-      const posInWord = word.direction === 'across' ? col - word.startCol : row - word.startRow;
-      let nextEmpty = null;
-      for (let pos = posInWord + 1; pos < word.answer.length; pos++) {
-        const r = word.direction === 'across' ? word.startRow : word.startRow + pos;
-        const c = word.direction === 'across' ? word.startCol + pos : word.startCol;
-        if (!updated[cellKey(r, c)]) {
-          nextEmpty = { row: r, col: c };
-          break;
-        }
-      }
-
+      const nextEmpty = findNextEmptyInWord(word, wordPosOf(word, row, col), updated);
       if (nextEmpty) {
         setCursorCell(nextEmpty);
       } else {
-        // Word is full — jump to the next word
         const nextIdx = (selectedWord + 1) % puzzle.words.length;
         const next = puzzle.words[nextIdx];
         setSelectedWord(nextIdx);
@@ -167,19 +165,18 @@ export function usePuzzle() {
         setCursorCell(prev);
         setInputs(p => ({ ...p, [cellKey(prev.row, prev.col)]: '' }));
       }
-    } else if (pressedKey === 'ArrowRight' && direction === 'across') {
+    } else if (pressedKey === 'ArrowRight' && word.direction === 'across') {
       setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
-    } else if (pressedKey === 'ArrowLeft' && direction === 'across') {
+    } else if (pressedKey === 'ArrowLeft' && word.direction === 'across') {
       setCursorCell(moveInWord(row, col, selectedWord, -1, puzzle.words));
-    } else if (pressedKey === 'ArrowDown' && direction === 'down') {
+    } else if (pressedKey === 'ArrowDown' && word.direction === 'down') {
       setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
-    } else if (pressedKey === 'ArrowUp' && direction === 'down') {
+    } else if (pressedKey === 'ArrowUp' && word.direction === 'down') {
       setCursorCell(moveInWord(row, col, selectedWord, -1, puzzle.words));
     } else if (pressedKey === ' ') {
       setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
     } else if (pressedKey === 'Tab') {
-      const next = (selectedWord + 1) % puzzle.words.length;
-      selectWord(next);
+      selectWord((selectedWord + 1) % puzzle.words.length);
     }
   }, [puzzle, grid, cursorCell, inputs, selectedWord, timerStarted, isComplete, moveInWord, selectWord]);
 

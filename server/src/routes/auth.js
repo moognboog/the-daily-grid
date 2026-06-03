@@ -45,9 +45,11 @@ router.get('/discord/callback', async (req, res) => {
     });
     const user = await userRes.json();
 
+    let defaultIndex = 0;
+    try { defaultIndex = Number(BigInt(user.id) % 5n); } catch { /* use 0 */ }
     const avatarUrl = user.avatar
       ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=64`
-      : `https://cdn.discordapp.com/embed/avatars/${Number(BigInt(user.id) % 5n)}.png`;
+      : `https://cdn.discordapp.com/embed/avatars/${defaultIndex}.png`;
 
     const playerData = {
       id: user.id,
