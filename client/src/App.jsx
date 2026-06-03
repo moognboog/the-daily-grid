@@ -114,7 +114,7 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
         <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-sm text-center">
-          <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Daily Crossword</p>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">The Daily Grid</p>
           <h1 className="text-3xl font-bold text-gray-800 mb-1">{puzzle.date}</h1>
           <p className="text-sm text-gray-500 mb-8">
             {puzzle.words.length} words &nbsp;·&nbsp; {puzzle.rows}×{puzzle.cols} grid
@@ -134,7 +134,7 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4">
         <div className="mb-6 text-center">
-          <h1 className="text-2xl font-bold text-gray-800">Daily Crossword</h1>
+          <h1 className="text-2xl font-bold text-gray-800">The Daily Grid</h1>
           {puzzleDone && (
             <p className="text-gray-500 text-sm mt-1">
               You completed today's puzzle
@@ -178,26 +178,26 @@ export default function App() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center py-6 px-3">
       <div className="w-full max-w-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="relative flex items-center justify-between mb-4">
           <div>
-            <h1 className="text-xl font-bold text-gray-800">Daily Crossword</h1>
+            <h1 className="text-xl font-bold text-gray-800">The Daily Grid</h1>
             <p className="text-xs text-gray-400">{puzzle?.date}</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <Timer elapsed={elapsedSeconds} />
+          </div>
+          <div className="text-right">
+            {player && (
+              <p className="text-xs text-gray-400">
+                {player.name} · Streak {player.streak ?? 0} 🔥
+              </p>
+            )}
             <button
               onClick={() => setShowLeaderboard(true)}
               className="text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
             >
               Leaderboard →
             </button>
-            <div className="text-right">
-              <Timer elapsed={elapsedSeconds} />
-              {player && (
-                <p className="text-xs text-gray-400">
-                  {player.name} · Streak {player.streak ?? 0}
-                </p>
-              )}
-            </div>
           </div>
         </div>
 

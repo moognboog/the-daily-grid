@@ -34,7 +34,7 @@ export default function CrosswordGrid({ grid, inputs, selectedWord, cursorCell, 
     return cursorCell && cursorCell.row === r && cursorCell.col === c;
   }
 
-  const cellSize = Math.min(Math.floor((Math.min(windowWidth, 560) - 16) / cols), 42);
+  const cellSize = Math.min(Math.floor((Math.min(windowWidth, 840) - 16) / cols), 63);
 
   return (
     <div className="relative">
