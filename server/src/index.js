@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-app.get('/health', (_req, res) => res.json({ ok: true }));
+app.get('/health', (_req, res) => {
+  const distPath = join(dirname(fileURLToPath(import.meta.url)), '../../../client/dist');
+  res.json({ ok: true, distPath, distExists: existsSync(distPath), cwd: process.cwd() });
+});
 
 app.use('/api/puzzle', puzzleRouter);
 app.use('/api/scores', scoresRouter);
