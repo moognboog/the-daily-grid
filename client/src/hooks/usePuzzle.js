@@ -137,15 +137,26 @@ export function usePuzzle() {
         return;
       }
 
-      // If this was the last cell in the word, jump to the next word
+      // Find the next empty cell in this word after the current position
       const posInWord = word.direction === 'across' ? col - word.startCol : row - word.startRow;
-      if (posInWord === word.answer.length - 1) {
+      let nextEmpty = null;
+      for (let pos = posInWord + 1; pos < word.answer.length; pos++) {
+        const r = word.direction === 'across' ? word.startRow : word.startRow + pos;
+        const c = word.direction === 'across' ? word.startCol + pos : word.startCol;
+        if (!updated[cellKey(r, c)]) {
+          nextEmpty = { row: r, col: c };
+          break;
+        }
+      }
+
+      if (nextEmpty) {
+        setCursorCell(nextEmpty);
+      } else {
+        // Word is full — jump to the next word
         const nextIdx = (selectedWord + 1) % puzzle.words.length;
         const next = puzzle.words[nextIdx];
         setSelectedWord(nextIdx);
         setCursorCell({ row: next.startRow, col: next.startCol });
-      } else {
-        setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
       }
     } else if (pressedKey === 'Backspace') {
       const ck = cellKey(row, col);
