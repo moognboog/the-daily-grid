@@ -180,8 +180,8 @@ export default function App() {
         {/* Header */}
         <div className="relative flex items-center justify-between mb-4">
           <div>
-            <h1 className="text-xl font-bold text-gray-800 font-mermaid">The Daily Grid</h1>
-            <p className="text-xs text-gray-400 font-mermaid">{puzzle ? fmtDate(puzzle.date) : ''}</p>
+            <h1 className="text-3xl font-bold text-gray-800 font-mermaid">The Daily Grid</h1>
+            <p className="text-lg text-gray-400 font-mermaid">{puzzle ? fmtDate(puzzle.date) : ''}</p>
           </div>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Timer elapsed={elapsedSeconds} />
@@ -205,6 +205,16 @@ export default function App() {
         {puzzleDone && (
           <div className="mb-4 px-4 py-2 bg-green-50 border border-green-200 rounded-lg text-center text-sm text-green-700">
             Completed in {fmt(alreadyDone ? alreadyDone.timeSeconds : elapsedSeconds)}
+          </div>
+        )}
+
+        {/* Active clue bar */}
+        {puzzle && (
+          <div className="mb-3 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 min-h-[2.5rem] flex items-center">
+            <span className="font-semibold mr-1">
+              {puzzle.words[selectedWord]?.number} {puzzle.words[selectedWord]?.direction === 'across' ? 'Across' : 'Down'}:
+            </span>
+            {puzzle.words[selectedWord]?.clue}
           </div>
         )}
 
