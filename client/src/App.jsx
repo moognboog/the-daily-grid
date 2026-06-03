@@ -67,10 +67,6 @@ export default function App() {
     if (!player || !puzzle || submitting) return;
     setSubmitting(true);
 
-    markCompleted(puzzle.date, elapsedSeconds);
-    updateStreak(puzzle.date);
-    refreshPlayer();
-
     try {
       await fetch('/api/scores', {
         method: 'POST',
@@ -87,6 +83,9 @@ export default function App() {
       // Non-critical — score might already exist
     }
 
+    markCompleted(puzzle.date, elapsedSeconds);
+    updateStreak(puzzle.date);
+    refreshPlayer();
     setSubmitted(true);
     setShowLeaderboard(true);
     setSubmitting(false);
