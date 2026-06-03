@@ -137,7 +137,16 @@ export function usePuzzle() {
         return;
       }
 
-      setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
+      // If this was the last cell in the word, jump to the next word
+      const posInWord = word.direction === 'across' ? col - word.startCol : row - word.startRow;
+      if (posInWord === word.answer.length - 1) {
+        const nextIdx = (selectedWord + 1) % puzzle.words.length;
+        const next = puzzle.words[nextIdx];
+        setSelectedWord(nextIdx);
+        setCursorCell({ row: next.startRow, col: next.startCol });
+      } else {
+        setCursorCell(moveInWord(row, col, selectedWord, 1, puzzle.words));
+      }
     } else if (pressedKey === 'Backspace') {
       const ck = cellKey(row, col);
       if (inputs[ck]) {
