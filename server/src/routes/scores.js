@@ -5,7 +5,7 @@ import { getTodayString } from '../lib/puzzleStore.js';
 const router = Router();
 
 router.post('/', async (req, res) => {
-  const { playerId, playerName, timeSeconds, date } = req.body;
+  const { playerId, playerName, avatarUrl, timeSeconds, date } = req.body;
   if (!playerId || !playerName || timeSeconds == null || !date) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
@@ -16,8 +16,8 @@ router.post('/', async (req, res) => {
   try {
     await prisma.score.upsert({
       where: { playerId_date: { playerId, date } },
-      update: {},
-      create: { playerId, playerName, timeSeconds, date },
+      update: { playerName, avatarUrl: avatarUrl ?? null },
+      create: { playerId, playerName, avatarUrl: avatarUrl ?? null, timeSeconds, date },
     });
     res.json({ success: true });
   } catch (err) {

@@ -8,6 +8,8 @@ import { existsSync } from 'fs';
 import prisma from './lib/prisma.js';
 import puzzleRouter from './routes/puzzle.js';
 import scoresRouter from './routes/scores.js';
+import authRouter from './routes/auth.js';
+import leaderboardRouter from './routes/leaderboard.js';
 import { getTodayString } from './lib/puzzleStore.js';
 import { postLeaderboard } from './lib/discord.js';
 
@@ -24,6 +26,8 @@ app.get('/health', (_req, res) => {
 
 app.use('/api/puzzle', puzzleRouter);
 app.use('/api/scores', scoresRouter);
+app.use('/api/leaderboard', leaderboardRouter);
+app.use('/auth', authRouter);
 
 // Serve the built React frontend in production
 const __dirname = dirname(fileURLToPath(import.meta.url));

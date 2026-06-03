@@ -11,6 +11,7 @@ model Score {
   id          Int      @id @default(autoincrement())
   playerId    String
   playerName  String
+  avatarUrl   String?
   timeSeconds Int
   date        String
   createdAt   DateTime @default(now())

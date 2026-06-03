@@ -3,7 +3,7 @@ import { fmt, fmtDate } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
 import { getCompletedToday, markCompleted, updateStreak, getAverageTime } from './utils/storage.js';
-import NameModal from './components/NameModal.jsx';
+import DiscordLogin from './components/DiscordLogin.jsx';
 import CrosswordGrid from './components/CrosswordGrid.jsx';
 import ClueList from './components/ClueList.jsx';
 import Timer from './components/Timer.jsx';
@@ -22,7 +22,7 @@ function buildAnswerInputs(words) {
 }
 
 export default function App() {
-  const { player, needsName, setName, refreshPlayer } = usePlayer();
+  const { player, needsLogin, refreshPlayer } = usePlayer();
   const {
     puzzle, grid, inputs, selectedWord, cursorCell,
     timerStarted, isComplete, elapsedSeconds, loading, error,
@@ -78,6 +78,7 @@ export default function App() {
         body: JSON.stringify({
           playerId: player.id,
           playerName: player.name,
+          avatarUrl: player.avatarUrl ?? null,
           timeSeconds: elapsedSeconds,
           date: puzzle.date,
         }),
@@ -91,7 +92,7 @@ export default function App() {
     setSubmitting(false);
   }
 
-  if (needsName) return <NameModal onSubmit={setName} />;
+  if (needsLogin) return <DiscordLogin />;
 
   if (loading) {
     return (
@@ -183,9 +184,11 @@ export default function App() {
             <h1 className="text-3xl font-bold text-gray-800 font-mermaid">The Daily Grid</h1>
             <p className="text-lg text-gray-400 font-mermaid">{puzzle ? fmtDate(puzzle.date) : ''}</p>
           </div>
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <Timer elapsed={elapsedSeconds} />
-          </div>
+          {!isComplete && !puzzleDone && (
+            <div className="absolute left-1/2 -translate-x-1/2">
+              <Timer elapsed={elapsedSeconds} />
+            </div>
+          )}
           <div className="text-right">
             {player && (
               <p className="text-xs text-gray-400">
