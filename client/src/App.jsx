@@ -26,7 +26,7 @@ export default function App() {
   const {
     puzzle, grid, inputs, selectedWord, cursorCell,
     timerStarted, isComplete, elapsedSeconds, loading, error,
-    inputRef, selectCell, selectWord, handleKey,
+    inputRef, selectCell, selectWord, handleKey, startTimer,
   } = usePuzzle();
 
   const [gameStarted, setGameStarted] = useState(false);
@@ -120,7 +120,7 @@ export default function App() {
             {puzzle.words.length} words &nbsp;·&nbsp; {puzzle.rows}×{puzzle.cols} grid
           </p>
           <button
-            onClick={() => setGameStarted(true)}
+            onClick={() => { setGameStarted(true); startTimer(); }}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors text-lg"
           >
             Start Puzzle

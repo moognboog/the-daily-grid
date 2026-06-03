@@ -41,11 +41,25 @@ export default function CrosswordGrid({ grid, inputs, selectedWord, cursorCell, 
       <input
         ref={inputRef}
         className="absolute opacity-0 w-0 h-0"
+        type="text"
+        inputMode="text"
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="characters"
         onKeyDown={e => {
+          // Android virtual keyboard sends 'Unidentified' for letter keys — let onInput handle those
+          if (e.key === 'Unidentified') return;
           e.preventDefault();
           handleKey(e.key);
         }}
-        readOnly
+        onInput={e => {
+          // Catches letter input from mobile virtual keyboards (Android in particular)
+          const val = e.target.value;
+          if (val) {
+            handleKey(val.slice(-1));
+            e.target.value = '';
+          }
+        }}
       />
       <div
         className="inline-grid border border-gray-800"

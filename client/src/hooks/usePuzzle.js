@@ -163,6 +163,10 @@ export function usePuzzle() {
     }
   }, [puzzle, grid, cursorCell, inputs, selectedWord, timerStarted, isComplete, moveInWord, selectWord]);
 
+  function startTimer() {
+    setTimerStarted(true);
+  }
+
   return {
     puzzle,
     grid,
@@ -178,5 +182,6 @@ export function usePuzzle() {
     selectCell,
     selectWord,
     handleKey,
+    startTimer,
   };
 }
