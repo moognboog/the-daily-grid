@@ -29,11 +29,17 @@ app.use('/api/scores', scoresRouter);
 app.use('/api/leaderboard', leaderboardRouter);
 app.use('/auth', authRouter);
 
-app.post('/api/admin/post-leaderboard', async (req, res) => {
+function requireAdminSecret(req, res) {
   const secret = process.env.ADMIN_SECRET;
   if (!secret || req.headers['x-admin-secret'] !== secret) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    res.status(401).json({ error: 'Unauthorized' });
+    return false;
   }
+  return true;
+}
+
+app.post('/api/admin/post-leaderboard', async (req, res) => {
+  if (!requireAdminSecret(req, res)) return;
   const dateStr = getTodayString();
   const scores = await prisma.score.findMany({
     where: { date: dateStr },
@@ -42,6 +48,17 @@ app.post('/api/admin/post-leaderboard', async (req, res) => {
   });
   await postLeaderboard(scores, dateStr);
   res.json({ ok: true, date: dateStr, scores: scores.length });
+});
+
+app.delete('/api/admin/scores', async (req, res) => {
+  if (!requireAdminSecret(req, res)) return;
+  const { date } = req.query;
+  if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return res.status(400).json({ error: 'date must be YYYY-MM-DD' });
+  }
+  const where = date ? { date } : {};
+  const { count } = await prisma.score.deleteMany({ where });
+  res.json({ ok: true, deleted: count, date: date ?? 'all' });
 });
 
 // Serve the built React frontend in production
