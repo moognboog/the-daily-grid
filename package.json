@@ -2,10 +2,12 @@
   "name": "crossword-app",
   "private": true,
   "scripts": {
+    "postinstall": "npm install --prefix client && npm install --prefix server",
     "predev": "npx kill-port 3001 5173 5174 --silent 2>nul || exit 0",
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
-    "install:all": "npm install && npm install --prefix client --include=dev && npm install --prefix server",
-    "build": "npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "build": "npm run build --prefix client && cd server && npx prisma generate",
+    "prestart": "cd server && npx prisma db push && npm run db:seed",
     "start": "node server/src/index.js"
   },
   "devDependencies": {
