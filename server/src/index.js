@@ -52,7 +52,7 @@ if (existsSync(clientDist)) {
   app.get('*', (_req, res) => res.sendFile(join(clientDist, 'index.html')));
 }
 
-cron.schedule('59 1 * * *', async () => {
+cron.schedule('59 23 * * *', async () => {
   console.log('[cron] Posting nightly leaderboard to Discord');
   const dateStr = getTodayString();
   const scores = await prisma.score.findMany({

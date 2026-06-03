@@ -3,26 +3,9 @@ import prisma from './prisma.js';
 const puzzleCache = new Map();
 
 export function getTodayString() {
-  const now = new Date();
-  const parts = Object.fromEntries(
-    new Intl.DateTimeFormat('en-US', {
-      timeZone: 'America/Denver',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      hourCycle: 'h23',
-    }).formatToParts(now).map(p => [p.type, p.value])
-  );
-
-  // Game day resets at 2:00 AM Mountain — before then still show the previous day's puzzle
-  const gameDate = new Date(Date.UTC(
-    parseInt(parts.year),
-    parseInt(parts.month) - 1,
-    parseInt(parts.day) - (parseInt(parts.hour) < 2 ? 1 : 0)
-  ));
-
-  return gameDate.toISOString().slice(0, 10);
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Denver',
+  }).format(new Date());
 }
 
 export async function getPuzzle(dateStr) {
