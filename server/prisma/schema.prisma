@@ -1,0 +1,38 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Score {
+  id          Int      @id @default(autoincrement())
+  playerId    String
+  playerName  String
+  timeSeconds Int
+  date        String
+  createdAt   DateTime @default(now())
+
+  @@unique([playerId, date])
+}
+
+model Puzzle {
+  id        Int      @id @default(autoincrement())
+  title     String?
+  date      String?  // optional YYYY-MM-DD pin — this puzzle serves on that date only
+  rows      Int
+  cols      Int
+  wordsJson String
+  createdAt DateTime @default(now())
+}
+
+model WordClue {
+  id   Int    @id @default(autoincrement())
+  word String
+  clue String
+
+  @@unique([word, clue])
+  @@index([word])
+}

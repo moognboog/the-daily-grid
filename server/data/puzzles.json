@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Outdoors",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      { "answer": "ACORN", "clue": "Oak tree's nut", "direction": "across", "startRow": 0, "startCol": 0 },
+      { "answer": "BROOK", "clue": "Small babbling stream", "direction": "across", "startRow": 2, "startCol": 0 },
+      { "answer": "CHESS", "clue": "Board game with kings and pawns", "direction": "across", "startRow": 4, "startCol": 0 },
+      { "answer": "OZONE", "clue": "Protective atmospheric layer", "direction": "down", "startRow": 0, "startCol": 2 },
+      { "answer": "ROOTS", "clue": "A plant's underground anchors", "direction": "down", "startRow": 0, "startCol": 3 }
+    ]
+  },
+  {
+    "title": "Wordy",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      { "answer": "UNCLE", "clue": "Your parent's brother", "direction": "across", "startRow": 0, "startCol": 0 },
+      { "answer": "CRANE", "clue": "Long-necked wading bird", "direction": "across", "startRow": 2, "startCol": 0 },
+      { "answer": "EATEN", "clue": "Consumed a meal", "direction": "across", "startRow": 4, "startCol": 0 },
+      { "answer": "COAST", "clue": "Where land meets the sea", "direction": "down", "startRow": 0, "startCol": 2 },
+      { "answer": "LANCE", "clue": "A knight's long spear", "direction": "down", "startRow": 0, "startCol": 3 }
+    ]
+  },
+  {
+    "title": "Pop Quiz",
+    "date": "2026-06-02",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      { "answer": "MOP",   "clue": "Unruly head of hair",                                "direction": "across", "startRow": 0, "startCol": 2 },
+      { "answer": "WARP",  "clue": "Kind of speed, in \"Star Trek\"",                    "direction": "across", "startRow": 1, "startCol": 0 },
+      { "answer": "LMFAO", "clue": "Pop duo with the 2011 #1 hit \"Party Rock Anthem\"", "direction": "across", "startRow": 2, "startCol": 0 },
+      { "answer": "MOLD",  "clue": "Growth on old bread",                                "direction": "across", "startRow": 3, "startCol": 1 },
+      { "answer": "BOX",   "clue": "UPS Store purchase",                                 "direction": "across", "startRow": 4, "startCol": 0 },
+      { "answer": "OWL",   "clue": "Creature capable of 270-degree head rotation",      "direction": "down",   "startRow": 0, "startCol": 0 },
+      { "answer": "MRFOX", "clue": "Dahl's \"Fantastic\" title character",               "direction": "down",   "startRow": 0, "startCol": 2 },
+      { "answer": "OPAL",  "clue": "Gemstone for most Libras",                          "direction": "down",   "startRow": 0, "startCol": 3 },
+      { "answer": "AMMO",  "clue": "Firing range rounds",                               "direction": "down",   "startRow": 1, "startCol": 1 },
+      { "answer": "ODD",   "clue": "Like all prime numbers but one",                    "direction": "down",   "startRow": 2, "startCol": 4 }
+    ]
+  },
+  {
+    "title": "Every Day",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      { "answer": "APPLE", "clue": "Keeps the doctor away", "direction": "across", "startRow": 0, "startCol": 0 },
+      { "answer": "BEACH", "clue": "Sandy shoreline", "direction": "across", "startRow": 2, "startCol": 0 },
+      { "answer": "HELLO", "clue": "Standard greeting", "direction": "across", "startRow": 4, "startCol": 0 },
+      { "answer": "PIECE", "clue": "A single portion or part", "direction": "down", "startRow": 0, "startCol": 1 },
+      { "answer": "PEARL", "clue": "Gem formed inside an oyster", "direction": "down", "startRow": 0, "startCol": 2 },
+      { "answer": "LOCAL", "clue": "Nearby, not far away", "direction": "down", "startRow": 0, "startCol": 3 }
+    ]
+  }
+]
