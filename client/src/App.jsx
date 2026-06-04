@@ -34,10 +34,29 @@ export default function App() {
   const [submitting, setSubmitting] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [serverCheckPending, setServerCheckPending] = useState(false);
   const autoRedirected = useRef(false);
 
   const alreadyDone = puzzle ? getCompletedToday(puzzle.date) : null;
   const puzzleDone = alreadyDone || submitted;
+
+  // Cross-device completion check: if no local record, ask the server.
+  useEffect(() => {
+    if (!player || !puzzle) return;
+    if (getCompletedToday(puzzle.date)) return;
+    setServerCheckPending(true);
+    fetch(`/api/scores/check?playerId=${encodeURIComponent(player.id)}&date=${puzzle.date}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.completed) {
+          markCompleted(puzzle.date, data.timeSeconds);
+          updateStreak(puzzle.date);
+          refreshPlayer();
+        }
+      })
+      .catch(() => {})
+      .finally(() => setServerCheckPending(false));
+  }, [player?.id, puzzle?.date]);
 
   // Auto-redirect to leaderboard the first time we discover the puzzle is already done.
   // The ref ensures this only fires once so the user can navigate back freely.
@@ -92,7 +111,7 @@ export default function App() {
 
   if (needsLogin) return <DiscordLogin />;
 
-  if (loading) {
+  if (loading || serverCheckPending) {
     return (
       <div className="min-h-screen flex items-center justify-center text-gray-500">
         Loading puzzle...

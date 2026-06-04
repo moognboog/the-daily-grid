@@ -29,6 +29,23 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/check', async (req, res) => {
+  const { playerId, date } = req.query;
+  if (!playerId || !date) {
+    return res.status(400).json({ error: 'Missing playerId or date' });
+  }
+  try {
+    const score = await prisma.score.findUnique({
+      where: { playerId_date: { playerId, date } },
+      select: { timeSeconds: true },
+    });
+    res.json(score ? { completed: true, timeSeconds: score.timeSeconds } : { completed: false });
+  } catch (err) {
+    console.error('[scores] check error:', err);
+    res.status(500).json({ error: 'Failed to check score' });
+  }
+});
+
 router.get('/today', async (req, res) => {
   try {
     const scores = await prisma.score.findMany({
