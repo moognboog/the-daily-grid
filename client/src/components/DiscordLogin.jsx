@@ -2,8 +2,7 @@ export default function DiscordLogin() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-sm text-center">
-        <p className="text-xs text-gray-400 uppercase tracking-widest mb-2 font-mermaid">The Daily Grid</p>
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">Daily Mini Crossword</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-mermaid">The Daily Grid</h1>
         <p className="text-gray-500 mb-8 text-sm">
           Sign in with Discord to play and appear on the leaderboard.
         </p>

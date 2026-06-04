@@ -30,7 +30,7 @@ async function postLeaderboard(scores, dateStr) {
   const body = {
     embeds: [
       {
-        title: `Daily Crossword Leaderboard`,
+        title: `Daily Grid Leaderboard`,
         description: `📅 ${fmtDate(dateStr)}\n\n${description}`,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
