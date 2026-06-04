@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 function ClueSection({ title, list, wordIndexMap, selectedWord, onSelectWord }) {
   return (
     <div className="flex-1 min-w-0">
@@ -29,24 +31,15 @@ export default function ClueList({ words, selectedWord, onSelectWord }) {
 
   const across = words.filter(w => w.direction === 'across');
   const down = words.filter(w => w.direction === 'down');
-  const wordIndexMap = new Map(words.map((w, i) => [w, i]));
+
+  // Stable object-identity map from word → index. Memoized because words is
+  // the same array reference for the lifetime of a puzzle.
+  const wordIndexMap = useMemo(() => new Map(words.map((w, i) => [w, i])), [words]);
 
   return (
     <div className="flex flex-col sm:flex-row gap-4 w-full">
-      <ClueSection
-        title="Across"
-        list={across}
-        wordIndexMap={wordIndexMap}
-        selectedWord={selectedWord}
-        onSelectWord={onSelectWord}
-      />
-      <ClueSection
-        title="Down"
-        list={down}
-        wordIndexMap={wordIndexMap}
-        selectedWord={selectedWord}
-        onSelectWord={onSelectWord}
-      />
+      <ClueSection title="Across" list={across} wordIndexMap={wordIndexMap} selectedWord={selectedWord} onSelectWord={onSelectWord} />
+      <ClueSection title="Down" list={down} wordIndexMap={wordIndexMap} selectedWord={selectedWord} onSelectWord={onSelectWord} />
     </div>
   );
 }

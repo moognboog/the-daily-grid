@@ -9,6 +9,8 @@ import ClueList from './components/ClueList.jsx';
 import Timer from './components/Timer.jsx';
 import Leaderboard from './components/Leaderboard.jsx';
 
+const NOOP = () => {};
+
 function buildAnswerInputs(words) {
   const map = {};
   words.forEach(word => {
@@ -29,18 +31,26 @@ export default function App() {
     inputRef, selectCell, selectWord, handleKey, startTimer,
   } = usePuzzle();
 
+  // Game flow
   const [gameStarted, setGameStarted] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
+  // UI state
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   const [copied, setCopied] = useState(false);
   const [serverCheckPending, setServerCheckPending] = useState(false);
   const autoRedirected = useRef(false);
 
+  // Derived — computed from localStorage on every render
   const alreadyDone = puzzle ? getCompletedToday(puzzle.date) : null;
   const puzzleDone = alreadyDone || submitted;
+  const completionTime = alreadyDone?.timeSeconds ?? elapsedSeconds;
+  const activeWord = puzzle?.words[selectedWord];
 
-  // Cross-device completion check: if no local record, ask the server.
+  // Cross-device completion check: if no local record exists, ask the server.
+  // Keeps serverCheckPending true while the fetch is in flight so the puzzle
+  // screen never flashes before a redirect can fire.
   useEffect(() => {
     if (!player || !puzzle) return;
     if (getCompletedToday(puzzle.date)) return;
@@ -54,7 +64,7 @@ export default function App() {
           refreshPlayer();
         }
       })
-      .catch(() => {})
+      .catch(NOOP)
       .finally(() => setServerCheckPending(false));
   }, [player?.id, puzzle?.date]);
 
@@ -68,11 +78,10 @@ export default function App() {
   }, [alreadyDone]);
 
   async function handleShare() {
-    const time = alreadyDone ? alreadyDone.timeSeconds : elapsedSeconds;
     const [y, m, d] = puzzle.date.split('-');
     const text = [
       `⬜🇹⬛   ${m}-${d}-${y}`,
-      `⬛🇩⬜   Time: ${fmt(time)}`,
+      `⬛🇩⬜   Time: ${fmt(completionTime)}`,
       `⬛🇬⬜   🔥${player.streak ?? 0} | Avg. Time: ${fmt(getAverageTime())}`,
       `https://the-daily-grid.com/`,
     ].join('\n');
@@ -127,7 +136,6 @@ export default function App() {
     );
   }
 
-  // Ready screen — shown once when a fresh puzzle loads (skip if already completed)
   if (puzzle && !gameStarted && !puzzleDone) {
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
@@ -155,8 +163,7 @@ export default function App() {
           <h1 className="text-2xl font-bold text-gray-800 font-mermaid">The Daily Grid</h1>
           {puzzleDone && (
             <p className="text-gray-500 text-sm mt-1">
-              You completed today's puzzle
-              {alreadyDone ? ` in ${fmt(alreadyDone.timeSeconds)}` : ` in ${fmt(elapsedSeconds)}`}!
+              You completed today's puzzle in {fmt(completionTime)}!
             </p>
           )}
           {player && puzzleDone && (
@@ -188,14 +195,12 @@ export default function App() {
     );
   }
 
-  // Puzzle view — show filled answers if already completed, otherwise live inputs
   const displayInputs = puzzleDone ? buildAnswerInputs(puzzle.words) : inputs;
   const readonly = puzzleDone;
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center py-6 px-3">
       <div className="w-full max-w-2xl">
-        {/* Header */}
         <div className="relative flex items-center justify-between mb-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-800 font-mermaid">The Daily Grid</h1>
@@ -221,24 +226,19 @@ export default function App() {
           </div>
         </div>
 
-        {/* Completed banner */}
         {puzzleDone && (
           <div className="mb-4 px-4 py-2 bg-green-50 border border-green-200 rounded-lg text-center text-sm text-green-700">
-            Completed in {fmt(alreadyDone ? alreadyDone.timeSeconds : elapsedSeconds)}
+            Completed in {fmt(completionTime)}
           </div>
         )}
 
-        {/* Active clue bar */}
-        {puzzle && (
-          <div className="mb-3 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 min-h-[2.5rem] flex items-center">
-            <span className="font-semibold mr-1">
-              {puzzle.words[selectedWord]?.number} {puzzle.words[selectedWord]?.direction === 'across' ? 'Across' : 'Down'}:
-            </span>
-            {puzzle.words[selectedWord]?.clue}
-          </div>
-        )}
+        <div className="mb-3 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 min-h-[2.5rem] flex items-center">
+          <span className="font-semibold mr-1">
+            {activeWord?.number} {activeWord?.direction === 'across' ? 'Across' : 'Down'}:
+          </span>
+          {activeWord?.clue}
+        </div>
 
-        {/* Grid */}
         <div className="flex justify-center mb-5">
           <CrosswordGrid
             grid={grid}
@@ -247,20 +247,18 @@ export default function App() {
             cursorCell={readonly ? null : cursorCell}
             puzzle={puzzle}
             inputRef={inputRef}
-            selectCell={readonly ? () => {} : selectCell}
-            handleKey={readonly ? () => {} : handleKey}
+            selectCell={readonly ? NOOP : selectCell}
+            handleKey={readonly ? NOOP : handleKey}
           />
         </div>
 
-        {/* Clues */}
         <ClueList
           words={puzzle?.words}
           selectedWord={selectedWord}
-          onSelectWord={readonly ? () => {} : selectWord}
+          onSelectWord={readonly ? NOOP : selectWord}
         />
       </div>
 
-      {/* Completion overlay */}
       {isComplete && !submitted && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 p-4">
           <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm text-center">

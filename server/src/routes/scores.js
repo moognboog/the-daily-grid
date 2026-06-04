@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import prisma from '../lib/prisma.js';
-import { getTodayString } from '../lib/puzzleStore.js';
 
 const router = Router();
 
@@ -43,22 +42,6 @@ router.get('/check', async (req, res) => {
   } catch (err) {
     console.error('[scores] check error:', err);
     res.status(500).json({ error: 'Failed to check score' });
-  }
-});
-
-router.get('/today', async (req, res) => {
-  try {
-    const scores = await prisma.score.findMany({
-      where: { date: getTodayString() },
-      orderBy: { timeSeconds: 'asc' },
-      select: { playerName: true, playerId: true, timeSeconds: true },
-    });
-
-    const ranked = scores.map((s, i) => ({ rank: i + 1, playerName: s.playerName, playerId: s.playerId, timeSeconds: s.timeSeconds }));
-    res.json(ranked);
-  } catch (err) {
-    console.error('[scores] Error fetching scores:', err);
-    res.status(500).json({ error: 'Failed to fetch scores' });
   }
 });
 

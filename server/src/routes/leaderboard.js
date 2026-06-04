@@ -4,6 +4,8 @@ import { getTodayString, getYesterdayString } from '../lib/puzzleStore.js';
 
 const router = Router();
 
+// Group a flat scores array into one entry per player, keeping the latest
+// name and avatar and collecting all score records.
 function groupByPlayer(scores) {
   const map = new Map();
   for (const s of scores) {
@@ -18,10 +20,12 @@ function groupByPlayer(scores) {
   return [...map.values()];
 }
 
-function calcStreak(dates) {
+// Count consecutive days ending on today or yesterday.
+// today/yesterday are pre-computed by the caller so this stays pure and cheap.
+function calcStreak(dates, today, yesterday) {
   const sorted = [...new Set(dates)].sort().reverse();
   if (!sorted.length) return 0;
-  if (sorted[0] !== getTodayString() && sorted[0] !== getYesterdayString()) return 0;
+  if (sorted[0] !== today && sorted[0] !== yesterday) return 0;
   let streak = 1;
   for (let i = 1; i < sorted.length; i++) {
     const diff = (new Date(sorted[i - 1]) - new Date(sorted[i])) / 86400000;
@@ -77,12 +81,14 @@ router.get('/averages', async (_req, res) => {
 router.get('/streaks', async (_req, res) => {
   try {
     const scores = await prisma.score.findMany({ orderBy: { date: 'asc' } });
+    const today = getTodayString();
+    const yesterday = getYesterdayString();
     const result = groupByPlayer(scores)
       .map(p => ({
         playerId: p.playerId,
         playerName: p.playerName,
         avatarUrl: p.avatarUrl,
-        streak: calcStreak(p.scores.map(s => s.date)),
+        streak: calcStreak(p.scores.map(s => s.date), today, yesterday),
         completions: p.scores.length,
       }))
       .filter(p => p.streak > 0)

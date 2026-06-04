@@ -29,6 +29,8 @@ app.use('/api/scores', scoresRouter);
 app.use('/api/leaderboard', leaderboardRouter);
 app.use('/auth', authRouter);
 
+// ── Admin endpoints ──────────────────────────────────────────────────────────
+
 function requireAdminSecret(req, res) {
   const secret = process.env.ADMIN_SECRET;
   if (!secret || req.headers['x-admin-secret'] !== secret) {
@@ -61,7 +63,8 @@ app.delete('/api/admin/scores', async (req, res) => {
   res.json({ ok: true, deleted: count, date: date ?? 'all' });
 });
 
-// Serve the built React frontend in production
+// ── Static frontend ──────────────────────────────────────────────────────────
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const clientDist = join(__dirname, '../../client/dist');
 if (existsSync(clientDist)) {
@@ -69,7 +72,9 @@ if (existsSync(clientDist)) {
   app.get('*', (_req, res) => res.sendFile(join(clientDist, 'index.html')));
 }
 
-cron.schedule('59 23 * * *', async () => {
+// ── Cron ─────────────────────────────────────────────────────────────────────
+
+async function postNightlyLeaderboard() {
   console.log('[cron] Posting nightly leaderboard to Discord');
   const dateStr = getTodayString();
   const scores = await prisma.score.findMany({
@@ -78,7 +83,11 @@ cron.schedule('59 23 * * *', async () => {
     select: { playerName: true, timeSeconds: true },
   });
   await postLeaderboard(scores, dateStr);
-}, { timezone: 'America/Denver' });
+}
+
+cron.schedule('59 23 * * *', postNightlyLeaderboard, { timezone: 'America/Denver' });
+
+// ── Startup ──────────────────────────────────────────────────────────────────
 
 async function start() {
   await prisma.$connect();

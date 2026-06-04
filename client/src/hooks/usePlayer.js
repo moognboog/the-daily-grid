@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react';
 import { getPlayer, savePlayer } from '../utils/storage.js';
 
+// Runs synchronously as a useState initializer so the correct auth state is
+// available on the first render — no flash of the login screen for returning users.
 function initPlayer() {
   const params = new URLSearchParams(window.location.search);
   const discordAuth = params.get('discord_auth');

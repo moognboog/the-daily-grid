@@ -1,12 +1,13 @@
-function fmtDate(dateStr) {
-  const [y, m, d] = dateStr.split('-').map(Number);
-  return `${m}/${d}/${y}`;
-}
-
-function formatTime(seconds) {
+function fmtTime(seconds) {
   const m = Math.floor(seconds / 60).toString().padStart(2, '0');
   const s = (seconds % 60).toString().padStart(2, '0');
   return `${m}:${s}`;
+}
+
+// Short date for embed headers: YYYY-MM-DD → M/D/YYYY
+function fmtShortDate(dateStr) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return `${m}/${d}/${y}`;
 }
 
 const MEDALS = ['🥇', '🥈', '🥉'];
@@ -20,18 +21,16 @@ async function postLeaderboard(scores, dateStr) {
 
   const lines = scores.map((s, i) => {
     const prefix = i < 3 ? MEDALS[i] : `${i + 1}.`;
-    return `${prefix} **${s.playerName}** — ${formatTime(s.timeSeconds)}`;
+    return `${prefix} **${s.playerName}** — ${fmtTime(s.timeSeconds)}`;
   });
 
-  const description = lines.length
-    ? lines.join('\n')
-    : '_No completions today_';
+  const description = lines.length ? lines.join('\n') : '_No completions today_';
 
   const body = {
     embeds: [
       {
         title: `Daily Grid Leaderboard`,
-        description: `📅 ${fmtDate(dateStr)}\n\n${description}`,
+        description: `📅 ${fmtShortDate(dateStr)}\n\n${description}`,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
       },
@@ -51,4 +50,4 @@ async function postLeaderboard(scores, dateStr) {
   }
 }
 
-export { postLeaderboard, formatTime };
+export { postLeaderboard };
