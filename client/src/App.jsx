@@ -52,10 +52,10 @@ export default function App() {
     const time = alreadyDone ? alreadyDone.timeSeconds : elapsedSeconds;
     const [y, m, d] = puzzle.date.split('-');
     const text = [
-      `T  ${m}-${d}-${y}`,
-      `D  Time: ${fmt(time)}`,
-      `G  🔥${player.streak ?? 0} | Avg. Time: ${fmt(getAverageTime())}`,
-      `https://the-daily-grid.com`,
+      `⬜🇹⬛   ${m}-${d}-${y}`,
+      `⬛🇩⬜   Time: ${fmt(time)}`,
+      `⬛🇬⬜   🔥${player.streak ?? 0} | Avg. Time: ${fmt(getAverageTime())}`,
+      `https://the-daily-grid.com/`,
     ].join('\n');
     await navigator.clipboard.writeText(text);
     setCopied(true);
