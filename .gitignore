@@ -6,3 +6,4 @@ server/prisma/*.db-journal
 .env
 .claude/
 Puzzles/
+server/data/puzzles-viz.txt
