@@ -4133,28 +4133,28 @@
         "clue": "\"The Gem State\"",
         "direction": "down",
         "startRow": 0,
-        "startCol": 1
+        "startCol": 2
       },
       {
         "answer": "NOSIR",
         "clue": "Boot camp reply",
         "direction": "down",
         "startRow": 0,
-        "startCol": 2
+        "startCol": 3
       },
       {
         "answer": "ETHOS",
         "clue": "Set of guiding beliefs",
         "direction": "down",
         "startRow": 0,
-        "startCol": 3
+        "startCol": 4
       },
       {
         "answer": "ROO",
         "clue": "Pal of Pooh",
         "direction": "down",
         "startRow": 2,
-        "startCol": 4
+        "startCol": 1
       }
     ]
   },
