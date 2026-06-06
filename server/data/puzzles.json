@@ -1464,55 +1464,6 @@
     ]
   },
   {
-    "title": "Miley Cyrus Twerk VMA",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "TEA",
-        "clue": "Snapple product",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "IOWA",
-        "clue": "Corn Belt state",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 0
-      },
-      {
-        "answer": "SWAG",
-        "clue": "Stylish, in slang",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "CREE",
-        "clue": "Canadian tribe",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 1
-      },
-      {
-        "answer": "YAK",
-        "clue": "Himalayan beast",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "EASE",
-        "clue": "Effortlessness",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 4
-      }
-    ]
-  },
-  {
     "title": "BFF and SKYPE",
     "rows": 5,
     "cols": 5,
@@ -2745,69 +2696,6 @@
     ]
   },
   {
-    "title": "JORTS and NOSE",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "JAM",
-        "clue": "Paper __ (annoying printer problem)",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "BLURT",
-        "clue": "Out-of-focus picture, e.g.",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 0
-      },
-      {
-        "answer": "JORTS",
-        "clue": "Garment that's a portmanteau word",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "NOSE",
-        "clue": "Missing part of the Great Sphinx of Giza",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 1
-      },
-      {
-        "answer": "HER",
-        "clue": "That woman",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "LBJ",
-        "clue": "President after J.F.K.",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "LONE",
-        "clue": "Sole",
-        "direction": "down",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "SEX",
-        "clue": "Reason for an R rating",
-        "direction": "down",
-        "startRow": 2,
-        "startCol": 4
-      }
-    ]
-  },
-  {
     "title": "Pop Divas",
     "rows": 5,
     "cols": 5,
@@ -2881,62 +2769,6 @@
         "direction": "down",
         "startRow": 1,
         "startCol": 4
-      }
-    ]
-  },
-  {
-    "title": "SOCHI Olympics",
-    "rows": 5,
-    "cols": 6,
-    "words": [
-      {
-        "answer": "GAS",
-        "clue": "Tank filler",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 2
-      },
-      {
-        "answer": "ISUCK",
-        "clue": "Admission of ineptitude",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "SOCHI",
-        "clue": "Site of the 2014 Olympics",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "PACER",
-        "clue": "Indiana basketballer",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 0
-      },
-      {
-        "answer": "SKI",
-        "clue": "Hit the slopes",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "LISPS",
-        "clue": "Speaks like Daffy Duck",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "SKIRT",
-        "clue": "Word before steak or chaser",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 5
       }
     ]
   },
@@ -4789,76 +4621,6 @@
     ]
   },
   {
-    "title": "Class Clown",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "CLASS",
-        "clue": "With 1-Down, school troublemaker",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "LIT",
-        "clue": "Illuminated",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 0
-      },
-      {
-        "answer": "OZONE",
-        "clue": "Atmospheric layer",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "WOO",
-        "clue": "Attempt to win over",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 0
-      },
-      {
-        "answer": "NOFUN",
-        "clue": "Like a party pooper",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "CLOWN",
-        "clue": "See 1-Across",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "SIN",
-        "clue": "\"Everything that used to be a ___ is now a disease\": Bill Maher",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 3
-      },
-      {
-        "answer": "STERN",
-        "clue": "Far from lenient",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 4
-      },
-      {
-        "answer": "ZOO",
-        "clue": "Where the wild things are?",
-        "direction": "down",
-        "startRow": 2,
-        "startCol": 1
-      }
-    ]
-  },
-  {
     "title": "World Series Giants vs Royals",
     "rows": 5,
     "cols": 5,
@@ -5086,62 +4848,6 @@
         "direction": "down",
         "startRow": 2,
         "startCol": 1
-      }
-    ]
-  },
-  {
-    "title": "Chop Suey",
-    "rows": 5,
-    "cols": 6,
-    "words": [
-      {
-        "answer": "CHOP",
-        "clue": "With 8-Across, stir-fried entree",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "BOO",
-        "clue": "\"Monsters, Inc.\" girl",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "INUSE",
-        "clue": "Locked lavatory sign",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 1
-      },
-      {
-        "answer": "SOT",
-        "clue": "Drunkard",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 2
-      },
-      {
-        "answer": "SUEY",
-        "clue": "See 1-Across",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "POET",
-        "clue": "Yeats or Keats",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 5
-      },
-      {
-        "answer": "BIDS",
-        "clue": "Competes on eBay",
-        "direction": "down",
-        "startRow": 1,
-        "startCol": 0
       }
     ]
   },
@@ -5681,69 +5387,6 @@
         "direction": "down",
         "startRow": 1,
         "startCol": 4
-      }
-    ]
-  },
-  {
-    "title": "OPRAH and BERRY",
-    "rows": 5,
-    "cols": 6,
-    "words": [
-      {
-        "answer": "AMO",
-        "clue": "\"Yo te ___\" (Spanish \"I love you\")",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 2
-      },
-      {
-        "answer": "OPRAH",
-        "clue": "North America's only black billionaire",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 0
-      },
-      {
-        "answer": "BERRY",
-        "clue": "Smoothie ingredient",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 1
-      },
-      {
-        "answer": "BROKE",
-        "clue": "Penniless",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 0
-      },
-      {
-        "answer": "YEW",
-        "clue": "Wand-making material in \"Harry Potter\"",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "LOBBY",
-        "clue": "Destination of many a down elevator",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "MARK",
-        "clue": "Grade, as papers",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 3
-      },
-      {
-        "answer": "OHYES",
-        "clue": "\"But of course!\"",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 5
       }
     ]
   },
@@ -6742,69 +6385,6 @@
       {
         "answer": "BUD",
         "clue": "Slang term for marijuana",
-        "direction": "down",
-        "startRow": 2,
-        "startCol": 0
-      }
-    ]
-  },
-  {
-    "title": "METOO and AMEN",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "ECG",
-        "clue": "Heart chart: Abbr.",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "SAME",
-        "clue": "\"I agree\"",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "METOO",
-        "clue": "\"I agree\"",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "AMEN",
-        "clue": "\"I agree\"",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 0
-      },
-      {
-        "answer": "WIN",
-        "clue": "Take home the gold",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "GEO",
-        "clue": "Prefix with politics or chemistry",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 4
-      },
-      {
-        "answer": "SEMI",
-        "clue": "18-wheeler",
-        "direction": "down",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "MAW",
-        "clue": "Big mouth",
         "direction": "down",
         "startRow": 2,
         "startCol": 0
@@ -8117,76 +7697,6 @@
         "direction": "down",
         "startRow": 2,
         "startCol": 0
-      }
-    ]
-  },
-  {
-    "title": "CARGO and SANTA",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "CARGO",
-        "clue": "___ pants (multipocketed wear)",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "ALARM",
-        "clue": "Dream interrupter",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 0
-      },
-      {
-        "answer": "ROGUE",
-        "clue": "No longer following orders",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "THONG",
-        "clue": "Victoria's Secret purchase",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 0
-      },
-      {
-        "answer": "SANTA",
-        "clue": "Secret ___ (holiday activity)",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "CARTS",
-        "clue": "Things seen at supermarkets or golf courses",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 0
-      },
-      {
-        "answer": "ALOHA",
-        "clue": "Hawaii hello",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "GRUNT",
-        "clue": "Weight room sound",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 3
-      },
-      {
-        "answer": "OMEGA",
-        "clue": "Watch brand that's also a Greek letter",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 4
       }
     ]
   },
@@ -9650,62 +9160,6 @@
         "direction": "down",
         "startRow": 0,
         "startCol": 4
-      }
-    ]
-  },
-  {
-    "title": "KISS and WALK",
-    "rows": 5,
-    "cols": 5,
-    "words": [
-      {
-        "answer": "KISS",
-        "clue": "Memorable feature of the \"V-J Day in Times Square\" photo",
-        "direction": "across",
-        "startRow": 0,
-        "startCol": 1
-      },
-      {
-        "answer": "ANTI",
-        "clue": "Opposite of pro",
-        "direction": "across",
-        "startRow": 1,
-        "startCol": 1
-      },
-      {
-        "answer": "SPOON",
-        "clue": "Cuddle closely",
-        "direction": "across",
-        "startRow": 2,
-        "startCol": 0
-      },
-      {
-        "answer": "EPIC",
-        "clue": "Totally awesome, informally",
-        "direction": "across",
-        "startRow": 3,
-        "startCol": 1
-      },
-      {
-        "answer": "WALK",
-        "clue": "Chance for a dog (and human) to stretch their legs",
-        "direction": "across",
-        "startRow": 4,
-        "startCol": 0
-      },
-      {
-        "answer": "SIN",
-        "clue": "Moral transgression",
-        "direction": "down",
-        "startRow": 0,
-        "startCol": 4
-      },
-      {
-        "answer": "SEW",
-        "clue": "Use a needle and thread",
-        "direction": "down",
-        "startRow": 2,
-        "startCol": 0
       }
     ]
   },
