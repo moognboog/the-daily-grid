@@ -31,7 +31,7 @@ export async function getPuzzle(dateStr) {
   // Fall back to rotating pool (excludes date-pinned entries)
   if (!row) {
     const pool = await prisma.puzzle.findMany({
-      where: { date: null },
+      where: { OR: [{ date: null }, { date: { lt: dateStr } }] },
       orderBy: { position: 'asc' },
     });
     if (pool.length === 0) {
