@@ -30,6 +30,12 @@ model Puzzle {
   createdAt DateTime @default(now())
 }
 
+// Key-value store for server-side config (e.g. puzzle cycle tracking)
+model Config {
+  key   String @id
+  value String
+}
+
 model WordClue {
   id   Int    @id @default(autoincrement())
   word String
