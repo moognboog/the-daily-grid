@@ -46,7 +46,7 @@ app.post('/api/admin/post-leaderboard', async (req, res) => {
   const scores = await prisma.score.findMany({
     where: { date: dateStr },
     orderBy: { timeSeconds: 'asc' },
-    select: { playerName: true, timeSeconds: true },
+    select: { playerId: true, playerName: true, timeSeconds: true },
   });
   await postLeaderboard(scores, dateStr);
   res.json({ ok: true, date: dateStr, scores: scores.length });
@@ -80,7 +80,7 @@ async function postNightlyLeaderboard() {
   const scores = await prisma.score.findMany({
     where: { date: dateStr },
     orderBy: { timeSeconds: 'asc' },
-    select: { playerName: true, timeSeconds: true },
+    select: { playerId: true, playerName: true, timeSeconds: true },
   });
   await postLeaderboard(scores, dateStr);
 }

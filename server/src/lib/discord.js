@@ -21,7 +21,7 @@ async function postLeaderboard(scores, dateStr) {
 
   const lines = scores.map((s, i) => {
     const prefix = i < 3 ? MEDALS[i] : `${i + 1}.`;
-    return `${prefix} **${s.playerName}** — ${fmtTime(s.timeSeconds)}`;
+    return `${prefix} <@${s.playerId}> — ${fmtTime(s.timeSeconds)}`;
   });
 
   const description = lines.length ? lines.join('\n') : '_No completions today_';
