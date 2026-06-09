@@ -30,6 +30,7 @@ async function postLeaderboard(scores, dateStr) {
     embeds: [
       {
         title: `Daily Grid Leaderboard`,
+        url: 'https://the-daily-grid.com',
         description: `📅 ${fmtShortDate(dateStr)}\n\n${description}`,
         color: 0x5865f2,
         timestamp: new Date().toISOString(),
