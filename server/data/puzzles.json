@@ -12536,5 +12536,2560 @@
         "startCol": 4
       }
     ]
+  },
+  {
+    "title": "JOCK and KAZOO",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "JOCK",
+        "clue": "Stereotypical wearer of a letterman jacket",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "AURAS",
+        "clue": "Surrounding glows",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "GRAZE",
+        "clue": "Eschew a heavy meal in favor of light snacks",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "SNOW",
+        "clue": "The white stuff?",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 1
+      },
+      {
+        "answer": "KOS",
+        "clue": "M.M.A. fight enders, for short",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 2
+      },
+      {
+        "answer": "JAG",
+        "clue": "Jacksonville N.F.L. player, informally",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "OURS",
+        "clue": "\"But this love is ___\" (Taylor Swift lyric)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "CRANK",
+        "clue": "Grumbly sort",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "KAZOO",
+        "clue": "Instrument that buzzes",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SEWS",
+        "clue": "Uses needle and thread",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "PILOT and EXED",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "SURE",
+        "clue": "\"Yeah, why not!\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ITEM",
+        "clue": "Collector's ___",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "PILOT",
+        "clue": "Worker who frequently takes off",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "LATE",
+        "clue": "Stressful way to run",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 1
+      },
+      {
+        "answer": "EXED",
+        "clue": "Crossed (out)",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 1
+      },
+      {
+        "answer": "SIP",
+        "clue": "Tiny drink",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "UTILE",
+        "clue": "Useful ... or a useful draw in Scrabble when you have a \"Q\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "RELAX",
+        "clue": "Chill",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "EMOTE",
+        "clue": "Be expressive with one's feelings",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "TED",
+        "clue": "TV's \"___ Lasso\"",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "MOVIE and SHREK",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "DING",
+        "clue": "When tripled, \"That's correct!\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "MOVIE",
+        "clue": "\"F1\" or \"One Battle After Another\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ATONE",
+        "clue": "Make up for one's sins",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "SHREK",
+        "clue": "Title film character who says \"That'll do, Donkey. That'll do\"",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "KEYS",
+        "clue": "Pocket janglers",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "DOTHE",
+        "clue": "Words before \"math\" or \"honors\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "IVORY",
+        "clue": "What the world's first chess set was carved from",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "NINES",
+        "clue": "Highest digits in Sudoku",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "GEEK",
+        "clue": "Nerd",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "MASK",
+        "clue": "Cover up",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "JEDI and SKUNK",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "JEDI",
+        "clue": "Any mentee of Yoda",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "OXEN",
+        "clue": "Plow pullers",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "SKUNK",
+        "clue": "Animal in the family Mephitidae, which comes from the Latin for \"stink\"",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "KILT",
+        "clue": "Scotsman's wear",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ACTS",
+        "clue": "Sections of a play",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "JOKIC",
+        "clue": "Nikola ___, three-time N.B.A. M.V.P. (2021, 2022 and 2024)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "EXULT",
+        "clue": "Jump for joy",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "DENTS",
+        "clue": "Auto body issues",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "INK",
+        "clue": "Tattoos, informally",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "SKA",
+        "clue": "Music similar to reggae",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "CHARM and UGLY",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "SCI",
+        "clue": "Poli ___ (college major)",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "SNOB",
+        "clue": "Person with a superior attitude",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "CHARM",
+        "clue": "Word whose letters are appropriately found from left to right in ... CHARISMA",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "RAIN",
+        "clue": "... PRECIPITATION",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "UGLY",
+        "clue": "... UNSIGHTLY",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "SNAIL",
+        "clue": "Slow-moving creature",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CORNY",
+        "clue": "Like a groan-inducing joke",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "IBM",
+        "clue": "Co. that created the first floppy disk",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "SHAG",
+        "clue": "Furry variety of carpet",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "CRU",
+        "clue": "World Class Wreckin' ___, music group in which Dr. Dre got his start",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "BOING and ERNIE",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "ALPS",
+        "clue": "Mountains on an Evian bottle",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "BOING",
+        "clue": "Sound effect for a pogo stick",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ERNIE",
+        "clue": "Bert's buddy",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "DUDE",
+        "clue": "\"Bruhhh!\"",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 1
+      },
+      {
+        "answer": "PEZ",
+        "clue": "Candy with collectible dispensers",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 2
+      },
+      {
+        "answer": "ABE",
+        "clue": "Presidential nickname of the 1860s",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "LORD",
+        "clue": "\"My Sweet ___\" (George Harrison song)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "PINUP",
+        "clue": "Affix with a thumbtack",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "SNIDE",
+        "clue": "Like an unpleasant, mocking comment",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "GEEZ",
+        "clue": "\"Good grief!\"",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "HAWK and POSTITS",
+    "rows": 7,
+    "cols": 7,
+    "words": [
+      {
+        "answer": "HAWK",
+        "clue": "Bird with keen eyesight",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "YOURE",
+        "clue": "With 8-Across, helpful comment to an oblivious video call participant",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "PETDOG",
+        "clue": "Scooby-Doo or Air Bud",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "POSTITS",
+        "clue": "Sticky notes",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ONMUTE",
+        "clue": "See 5-Across",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "SCABS",
+        "clue": "Protective layers over skin wounds",
+        "direction": "across",
+        "startRow": 5,
+        "startCol": 0
+      },
+      {
+        "answer": "HENS",
+        "clue": "Roosters' mates",
+        "direction": "across",
+        "startRow": 6,
+        "startCol": 0
+      },
+      {
+        "answer": "HOTTUBS",
+        "clue": "Places to find some small jets",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "AUDITS",
+        "clue": "Reviews, as taxes",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "WROTE",
+        "clue": "Texted or emailed, e.g.",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 5
+      },
+      {
+        "answer": "KEGS",
+        "clue": "Barrels of beer",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 6
+      },
+      {
+        "answer": "YESMAN",
+        "clue": "Overagreeable underling",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "PONCE",
+        "clue": "Spanish conquistador ___ de León",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "POSH",
+        "clue": "Swanky, like a certain Spice Girl",
+        "direction": "down",
+        "startRow": 3,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "DIRTY and PITHY",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "GUM",
+        "clue": "Chew on that!",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "DIRTY",
+        "clue": "Like clothes in the hamper",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ONEAM",
+        "clue": "Late time to stay up on a weekday",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "PITHY",
+        "clue": "Using few words effectively",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ETA",
+        "clue": "Traffic increases it, for short",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "GRETA",
+        "clue": "Climate activist Thunberg",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "UTAH",
+        "clue": "Home to Capitol Reef National Park, which surprisingly is not by the ocean",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "MYMY",
+        "clue": "Repeated exclamation",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "DOPE",
+        "clue": "Freakin' awesome",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "INIT",
+        "clue": "Rolling ___ (super rich)",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      }
+    ]
+  },
+  {
+    "title": "AMOUR and SEEDY",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "SMACK",
+        "clue": "Talk ___ (boastfully banter)",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "TABLE",
+        "clue": "What has legs, but never walks?",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AMOUR",
+        "clue": "French for \"love\"",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "RIVER",
+        "clue": "What has a mouth, but never talks?",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "SEEDY",
+        "clue": "Run-down in appearance",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "STARS",
+        "clue": "Milky Way bits",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "MAMIE",
+        "clue": "___ Eisenhower, 1950s first lady",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "ABOVE",
+        "clue": "Overhead",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CLUED",
+        "clue": "Given a crossword hint",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "KERRY",
+        "clue": "Actress Washington of \"Scandal\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "FLUFF and AMINO",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "FLUFF",
+        "clue": "Writing that lacks substance",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "LINER",
+        "clue": "Pencil in a cosmetics bag",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AMINO",
+        "clue": "___ acid (building block of proteins)",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "GOODS",
+        "clue": "Partner of services, in economics",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "NIT",
+        "clue": "Small criticism",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 2
+      },
+      {
+        "answer": "FLAG",
+        "clue": "Warning sign in a relationship, metaphorically",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "LIMO",
+        "clue": "Fancy prom ride",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "UNION",
+        "clue": "SAG-AFTRA, for one",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "FENDI",
+        "clue": "Luxury fashion house headquartered in Rome",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "FROST",
+        "clue": "Ground coating on a cold morning",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "PSYCH and HOHUM",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "PSYCH",
+        "clue": "Study of the human mind, informally",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "SCALE",
+        "clue": "Common fixture in a gym bathroom",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "HOHUM",
+        "clue": "Kinda boring",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "ANON",
+        "clue": "Like a commenter without a username, for short",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "WEOK",
+        "clue": "\"All good between us?\"",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "PSHAW",
+        "clue": "Old-fashioned \"Yeah, right!\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "SCONE",
+        "clue": "Coffeehouse pastry",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "YAHOO",
+        "clue": "Google alternative",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CLUNK",
+        "clue": "Sound of a dull thump",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "HEM",
+        "clue": "Line on the bottom of a pant leg",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "SPICY and PEARL",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "SPICY",
+        "clue": "Like jerk chicken and chicken vindaloo",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "HANOI",
+        "clue": "Capital of Vietnam",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ILLBE",
+        "clue": "\"Well, would ya look at that!\"",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "PEARL",
+        "clue": "Gem in an oyster",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "WAD",
+        "clue": "Thick roll of cash",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 2
+      },
+      {
+        "answer": "SHIP",
+        "clue": "Part of a naval fleet",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "PALE",
+        "clue": "The \"P\" in I.P.A.",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "INLAW",
+        "clue": "Relative by marriage",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "COBRA",
+        "clue": "King ___ (venomous snake)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "YIELD",
+        "clue": "Sign obeyed by merging traffic",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "HOTONE and DOLLOP",
+    "rows": 6,
+    "cols": 6,
+    "words": [
+      {
+        "answer": "YAS",
+        "clue": "\"___, queen!\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "MENU",
+        "clue": "Waiter's handout",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "POLYP",
+        "clue": "Tiny invertebrate that, when grouped in the thousands, makes up a coral",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "DOLLOP",
+        "clue": "Scoop of sour cream",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "HOTONE",
+        "clue": "Spicy wing, as seen on a popular YouTube talk show",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "SLOWER",
+        "clue": "Comparative suggested by this visual puzzle: S is below the line",
+        "direction": "across",
+        "startRow": 5,
+        "startCol": 0
+      },
+      {
+        "answer": "YELLOW",
+        "clue": "Like SpongeBob and Spirit airplanes",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "ANYONE",
+        "clue": "\"Bueller ...? Bueller ...?\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "SUPPER",
+        "clue": "Meal suggested by this visual puzzle: S is above the line",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 5
+      },
+      {
+        "answer": "MOLTO",
+        "clue": "\"___ bene\" (Italian for \"very good\")",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "POOL",
+        "clue": "Amenity in a Florida backyard, perhaps",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "DHS",
+        "clue": "Agcy. at the center of a 2026 government shutdown",
+        "direction": "down",
+        "startRow": 3,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "WAYMORE and STATION",
+    "rows": 7,
+    "cols": 7,
+    "words": [
+      {
+        "answer": "PGS",
+        "clue": "Book parts: Abbr.",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "WAYMO",
+        "clue": "Silicon Valley company that operates a fleet of robotaxis",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "WAYMORE",
+        "clue": "To a much greater degree",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "AIR",
+        "clue": "Contents of a scuba diver's tank",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "KIA",
+        "clue": "South Korean automaker",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 4
+      },
+      {
+        "answer": "STATION",
+        "clue": "Stop on a train route",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "ETHEL",
+        "clue": "Actress Merman of \"Anything Goes\"",
+        "direction": "across",
+        "startRow": 5,
+        "startCol": 1
+      },
+      {
+        "answer": "REUSE",
+        "clue": "Find another purpose for",
+        "direction": "across",
+        "startRow": 6,
+        "startCol": 1
+      },
+      {
+        "answer": "PAYRATE",
+        "clue": "Employee's hourly calculation",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "GYM",
+        "clue": "Workout spot",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SMOKIES",
+        "clue": "\"Great\" mountains of Tennessee, familiarly",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "WAITER",
+        "clue": "One giving you the dish?",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "ORIOLE",
+        "clue": "Baltimore M.L.B. player",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 5
+      },
+      {
+        "answer": "WAS",
+        "clue": "Used to be",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "EAN",
+        "clue": "Suffix with Caesar or Euclid",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 6
+      },
+      {
+        "answer": "THU",
+        "clue": "Night that NBC once aired \"30 Rock\" and \"The Office\": Abbr.",
+        "direction": "down",
+        "startRow": 4,
+        "startCol": 3
+      }
+    ]
+  },
+  {
+    "title": "CONAN and ALEXA",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "PAGER",
+        "clue": "On-call doctor's device",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ALEXA",
+        "clue": "Amazon virtual assistant",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "CONAN",
+        "clue": "Host of the 2026 Oscars",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "STUCK",
+        "clue": "Stumped on a puzzle, say",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "STS",
+        "clue": "Aves. and blvds.",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 2
+      },
+      {
+        "answer": "PACS",
+        "clue": "Election-influencing groups, for short",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ALOT",
+        "clue": "Quite a few",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "GENUS",
+        "clue": "The \"Tyrannosaurus\" of Tyrannosaurus rex",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "EXACT",
+        "clue": "Right on",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "RANKS",
+        "clue": "Puts in order from best to worst, maybe",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "MUSIC and HADES",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "MUSIC",
+        "clue": "Blues, e.g.",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "OHARA",
+        "clue": "Late actress Catherine of \"Schitt's Creek\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "RULES",
+        "clue": "List included with a board game",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "PRANK",
+        "clue": "April Fools' shenanigan",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "HADES",
+        "clue": "Greek god of the underworld",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "MORPH",
+        "clue": "Transform gradually",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "UHURA",
+        "clue": "\"Star Trek\" officer portrayed by Zoe Saldaña",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "SALAD",
+        "clue": "Greens, e.g.",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "IRENE",
+        "clue": "Woman's name that's an anagram of ERNIE",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "CASKS",
+        "clue": "Containers for reds and whites",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "COACH and APPLE",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "COACH",
+        "clue": "One drawing X's and O's",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "APPLE",
+        "clue": "Company whose market cap (~$4 trillion) exceeds the G.D.P. of most countries",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "RELAX",
+        "clue": "\"Chill!\"",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "DRUM",
+        "clue": "Do some rhythmic tapping",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "SASS",
+        "clue": "Back talk",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "CARDS",
+        "clue": "What's the deal?",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "OPERA",
+        "clue": "\"The Phantom of the ___\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "APLUS",
+        "clue": "Excellent grade",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CLAMS",
+        "clue": "Sandpipers dig for them in the sand",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "HEX",
+        "clue": "Evil spell",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "FLASH and ORGAN",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "FLASH",
+        "clue": "Word before \"card,\" \"flood\" or \"photography\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "LANCE",
+        "clue": "Joust weapon",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ORGAN",
+        "clue": "Brain, heart or lungs",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "SVEN",
+        "clue": "\"Frozen\" reindeer",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "SALT",
+        "clue": "What can be found on frozen roads or frozen margaritas",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "FLOSS",
+        "clue": "Follow a dentist's recommendation",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "LARVA",
+        "clue": "Baby bug",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "ANGEL",
+        "clue": "Shape made in the snow",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "SCANT",
+        "clue": "Very little",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "HEN",
+        "clue": "Egg layer",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "NIGHT and BOGEY",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "BOO",
+        "clue": "Ghost's word",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "POOF",
+        "clue": "Magician's \"And just like that, it's gone!\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "NIGHT",
+        "clue": "With 7-Across, it's full of stars",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "ONES",
+        "clue": "White bills in Monopoly",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "SKY",
+        "clue": "See 5-Across",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "BOGEY",
+        "clue": "Score of 4 on a par 3",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "OOHS",
+        "clue": "___ and aahs",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "OFT",
+        "clue": "Frequently, in poetry",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "PINK",
+        "clue": "Like the sands of Harbour Island, Bahamas",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "NOS",
+        "clue": "Dissenting votes",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "JCOLE and AUDIT",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "TBS",
+        "clue": "Cable channel that airs March Madness games",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "JCOLE",
+        "clue": "Rapper with the 2026 #1 album \"The Fall-Off\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AUDIT",
+        "clue": "Review thoroughly, as taxes",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "CRAP",
+        "clue": "\"Darn it!\"",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "KEYS",
+        "clue": "Annoying things to realize you've left in the house",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "TODAY",
+        "clue": "Yesterday, tomorrow...",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "BLIPS",
+        "clue": "Radar screen dots",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SET",
+        "clue": "\"On your marks ... get ___ ...\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "JACK",
+        "clue": "Playing card historically called a knave",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "CURE",
+        "clue": "Medical success",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      }
+    ]
+  },
+  {
+    "title": "BYGONES and DONATE",
+    "rows": 8,
+    "cols": 7,
+    "words": [
+      {
+        "answer": "KEEP",
+        "clue": "Spring Cleaning Box 1: I still love it!",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "EDGAR",
+        "clue": "First name of poet Poe",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "BYGONES",
+        "clue": "Let ___ be ___",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "APE",
+        "clue": "Gorilla or chimpanzee",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "GMT",
+        "clue": "Clock setting in the U.K.: Abbr.",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 4
+      },
+      {
+        "answer": "DAD",
+        "clue": "Eugene Levy, to Dan Levy",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "ROY",
+        "clue": "___ G BIV (color mnemonic)",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 4
+      },
+      {
+        "answer": "DONATE",
+        "clue": "Spring Cleaning Box 2: Someone else will love it!",
+        "direction": "across",
+        "startRow": 5,
+        "startCol": 1
+      },
+      {
+        "answer": "SUEME",
+        "clue": "\"If you don't like it, that's your problem!\"",
+        "direction": "across",
+        "startRow": 6,
+        "startCol": 1
+      },
+      {
+        "answer": "TOSS",
+        "clue": "Spring Cleaning Box 3: It's worthless!",
+        "direction": "across",
+        "startRow": 7,
+        "startCol": 2
+      },
+      {
+        "answer": "KEYPADS",
+        "clue": "Panels of buttons on which passcodes are entered",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "EDGEDOUT",
+        "clue": "Just barely defeated",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "EGO",
+        "clue": "A narcissist has a big one",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "PANGRAMS",
+        "clue": "High-scoring words in Spelling Bee",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "REMOTES",
+        "clue": "Channel changers",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 5
+      },
+      {
+        "answer": "BAD",
+        "clue": "___ Bunny, musician known as the \"King of Latin Trap\"",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "STYE",
+        "clue": "Painful eye malady",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 6
+      },
+      {
+        "answer": "NEO",
+        "clue": "Prefix for a modern genre",
+        "direction": "down",
+        "startRow": 5,
+        "startCol": 3
+      }
+    ]
+  },
+  {
+    "title": "COLIN and TEXAS",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "COLIN",
+        "clue": "Jost of \"Saturday Night Live\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "RHINE",
+        "clue": "German wine valley whose name rhymes with \"wine\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AANDW",
+        "clue": "Big name in root beer",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "FRUIT",
+        "clue": "Common slot machine symbol",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "TEXAS",
+        "clue": "James Talarico's state",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "CRAFT",
+        "clue": "Cunning skill",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "OHARE",
+        "clue": "Chicago airport",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "LINUX",
+        "clue": "Operating system on which Android is partly based",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "INDIA",
+        "clue": "World's most populous country",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "NEWTS",
+        "clue": "Small salamanders",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "HONEY and AWOKE",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "ADS",
+        "clue": "Often-skipped parts of podcasts",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "HAGUE",
+        "clue": "Netherlands city that's home to the International Court of Justice, with \"The\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AWOKE",
+        "clue": "Stopped sleeping",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "HONEY",
+        "clue": "Contents of a bear-shaped bottle",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ALYSA",
+        "clue": "___ Liu, gold medal-winning figure skater at the 2026 Olympics",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "AGONY",
+        "clue": "Sheer torment",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "DUKES",
+        "clue": "\"The ___ of Hazzard\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SEEYA",
+        "clue": "\"Catch you later!\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "HAHA",
+        "clue": "Text reaction button between \"👍\" and \"‼️\"",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AWOL",
+        "clue": "Nowhere to be found, for short",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 1
+      }
+    ]
+  },
+  {
+    "title": "MACAW and SIREN",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "MACS",
+        "clue": "Apple computers",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "MACAW",
+        "clue": "Colorful parrot with a long tail",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "AROMA",
+        "clue": "Enticing scent",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "SIREN",
+        "clue": "___ song (dangerous lure)",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "KEN",
+        "clue": "\"Barbie\" character whose job is \"beach\"",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "MARIE",
+        "clue": "Singing sister in the Osmond family",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "ACORN",
+        "clue": "Future oak tree, perhaps",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CAME",
+        "clue": "Attended",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SWAN",
+        "clue": "___ song (farewell performance)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "MASK",
+        "clue": "Conceal",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "BANJO and ONION",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "BANJO",
+        "clue": "Instrument in bluegrass music",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ONION",
+        "clue": "Publication with the headline \"C.I.A. Realizes It's Been Using Black Highlighters All These Years,\" with \"The\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ANKLE",
+        "clue": "Cut-off point for cropped jeans",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "RIOT",
+        "clue": "Hilarious person",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "DEN",
+        "clue": "Place to hibernate",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "BOARD",
+        "clue": "\"Tens across the ___!\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ANNIE",
+        "clue": "1982 film in which Carol Burnett played Miss Hannigan",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "NIKON",
+        "clue": "Japanese camera brand",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "JOLT",
+        "clue": "Sudden shock",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "ONE",
+        "clue": "Final number in a countdown",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "SKULL and FERAL",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "MBAS",
+        "clue": "Degrees for boardroom execs",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "ALLI",
+        "clue": "\"___ want for Christmas ...\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 1
+      },
+      {
+        "answer": "SKULL",
+        "clue": "What Hamlet holds while giving his \"Alas, poor Yorick!\" speech",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "FERAL",
+        "clue": "Wild, as an animal",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ORB",
+        "clue": "Sphere",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "MAKER",
+        "clue": "Word after \"match\" or \"mischief\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "BLURB",
+        "clue": "Bit of writing on a book jacket",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "ALLA",
+        "clue": "Penne ___ vodka",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SILL",
+        "clue": "Window ledge",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "SFO",
+        "clue": "Bay Area airport, for short",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "INBED and BLIMP",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "INBED",
+        "clue": "Bad place to spend time on your phone, it's said",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "TOLLS",
+        "clue": "Bridge-crossing fees",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "STILL",
+        "clue": "\"Yeah, but even so ...\"",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "MEME",
+        "clue": "Internet joke",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "ESPN",
+        "clue": "\"SportsCenter\" channel",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "ITSME",
+        "clue": "Words after a knock on the door",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "NOTES",
+        "clue": "Material for a lecture",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "BLIMP",
+        "clue": "Goodyear vehicle",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "ELLEN",
+        "clue": "Comedian DeGeneres",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "DSL",
+        "clue": "Broadband connection, for short",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "HIPHOP and ONAWHIM",
+    "rows": 7,
+    "cols": 7,
+    "words": [
+      {
+        "answer": "OPTS",
+        "clue": "Makes a choice, with \"for\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "SNOWY",
+        "clue": "Like winters in Buffalo and Boulder",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "STATEN",
+        "clue": "___ Island (N.Y.C. borough)",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "THEWIRE",
+        "clue": "HBO show that spawned the Idris Elba quote \"I want you to put the word out there, that we back up\"",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "HIPHOP",
+        "clue": "Genre for Cardi B or Jay-Z",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "UNPIN",
+        "clue": "Remove from the top of one's profile, as a post",
+        "direction": "across",
+        "startRow": 5,
+        "startCol": 0
+      },
+      {
+        "answer": "DEEM",
+        "clue": "Consider to be",
+        "direction": "across",
+        "startRow": 6,
+        "startCol": 0
+      },
+      {
+        "answer": "ONAWHIM",
+        "clue": "Done impulsively",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "POTION",
+        "clue": "Magical concoction",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "TWERP",
+        "clue": "Little scamp",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 5
+      },
+      {
+        "answer": "SYNE",
+        "clue": "\"Auld Lang ___\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 6
+      },
+      {
+        "answer": "STEPPE",
+        "clue": "Vast Eurasian grassland",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 2
+      },
+      {
+        "answer": "SHINE",
+        "clue": "Follower of \"sun\" (for weather) or \"moon\" (for liquor)",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 1
+      },
+      {
+        "answer": "THUD",
+        "clue": "Land with a ___ (fail)",
+        "direction": "down",
+        "startRow": 3,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "CTRLX and CELLO",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "PACK",
+        "clue": "Prepare for a weekend getaway",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "LINEN",
+        "clue": "So-called \"king of summer fabrics\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ANGLE",
+        "clue": "Go fishing",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "CTRLX",
+        "clue": "\"Cut\" command, on a keyboard",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "YOYO",
+        "clue": "___ Ma, 3-Down player who has performed for nine U.S. presidents",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "PINTO",
+        "clue": "Kind of bean in a burrito",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "ANGRY",
+        "clue": "More than a little irritated",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "CELLO",
+        "clue": "See 8-Across",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "KNEX",
+        "clue": "Building toy brand",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 4
+      },
+      {
+        "answer": "LACY",
+        "clue": "Like many wedding veils",
+        "direction": "down",
+        "startRow": 1,
+        "startCol": 0
+      }
+    ]
+  },
+  {
+    "title": "JAWS and GIANT",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "JAWS",
+        "clue": "1975 Spielberg film that's considered the first summer blockbuster",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ISEE",
+        "clue": "\"Oh okay, gotcha\"",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "GIANT",
+        "clue": "Athlete from New York (in one sport) or San Francisco (in another)",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "AVOW",
+        "clue": "Declare publicly",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 1
+      },
+      {
+        "answer": "NERO",
+        "clue": "Emperor who didn't actually fiddle while Rome burned",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 1
+      },
+      {
+        "answer": "JIG",
+        "clue": "\"The ___ is up!\"",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "ASIAN",
+        "clue": "Like lotus root and wax apples",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "WEAVE",
+        "clue": "Drive dangerously in traffic",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "SENOR",
+        "clue": "Spanish title",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "TWO",
+        "clue": "Scrabble value of D or G",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 4
+      }
+    ]
+  },
+  {
+    "title": "SHOW and HORSE",
+    "rows": 5,
+    "cols": 5,
+    "words": [
+      {
+        "answer": "SHOW",
+        "clue": "\"Paradise\" or \"Lost\"",
+        "direction": "across",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "MAUI",
+        "clue": "Hawaiian island with the famous Road to Hana",
+        "direction": "across",
+        "startRow": 1,
+        "startCol": 0
+      },
+      {
+        "answer": "ASTRA",
+        "clue": "___ Zeneca (pharma company)",
+        "direction": "across",
+        "startRow": 2,
+        "startCol": 0
+      },
+      {
+        "answer": "STEEL",
+        "clue": "\"Stainless\" metal",
+        "direction": "across",
+        "startRow": 3,
+        "startCol": 0
+      },
+      {
+        "answer": "HORSE",
+        "clue": "One half of a centaur",
+        "direction": "across",
+        "startRow": 4,
+        "startCol": 0
+      },
+      {
+        "answer": "SMASH",
+        "clue": "Massive success",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 0
+      },
+      {
+        "answer": "HASTO",
+        "clue": "Must",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 1
+      },
+      {
+        "answer": "OUTER",
+        "clue": "___ boroughs (term for the non-Manhattan parts of New York City)",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 2
+      },
+      {
+        "answer": "WIRES",
+        "clue": "Electrician's specialty",
+        "direction": "down",
+        "startRow": 0,
+        "startCol": 3
+      },
+      {
+        "answer": "ALE",
+        "clue": "Bar beverage",
+        "direction": "down",
+        "startRow": 2,
+        "startCol": 4
+      }
+    ]
   }
 ]
