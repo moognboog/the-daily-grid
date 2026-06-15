@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { fmt, fmtDate, cellKey } from './utils/format.js';
 import { usePlayer } from './hooks/usePlayer.js';
 import { usePuzzle } from './hooks/usePuzzle.js';
-import { getCompletedToday, markCompleted, updateStreak, getAverageTime } from './utils/storage.js';
+import { getCompletedToday, markCompleted, updateStreak, getAverageTime, clearProgress } from './utils/storage.js';
 import DiscordLogin from './components/DiscordLogin.jsx';
 import CrosswordGrid from './components/CrosswordGrid.jsx';
 import ClueList from './components/ClueList.jsx';
@@ -29,6 +29,7 @@ export default function App() {
     puzzle, grid, inputs, selectedWord, cursorCell,
     timerStarted, isComplete, elapsedSeconds, loading, error,
     inputRef, selectCell, selectWord, handleKey, startTimer,
+    hasSavedProgress, restoreProgress,
   } = usePuzzle();
 
   // Game flow
@@ -60,6 +61,7 @@ export default function App() {
       .then(data => {
         if (data.completed) {
           markCompleted(puzzle.date, data.timeSeconds);
+          clearProgress();
           updateStreak(puzzle.date);
           refreshPlayer();
         }
@@ -111,6 +113,7 @@ export default function App() {
     }
 
     markCompleted(puzzle.date, elapsedSeconds);
+    clearProgress();
     updateStreak(puzzle.date);
     refreshPlayer();
     setSubmitted(true);
@@ -142,14 +145,23 @@ export default function App() {
         <div className="bg-white rounded-2xl shadow-lg p-10 w-full max-w-sm text-center">
           <p className="text-xs text-gray-400 uppercase tracking-widest mb-1 font-mermaid">The Daily Grid</p>
           <h1 className="text-3xl font-bold text-gray-800 mb-1 font-mermaid">{fmtDate(puzzle.date)}</h1>
-          <p className="text-sm text-gray-500 mb-8">
+          <p className="text-sm text-gray-500 mb-2">
             {puzzle.words.length} words &nbsp;·&nbsp; {puzzle.rows}×{puzzle.cols} grid
           </p>
+          {hasSavedProgress ? (
+            <p className="text-sm text-gray-400 mb-8">Pick up where you left off</p>
+          ) : (
+            <div className="mb-8" />
+          )}
           <button
-            onClick={() => { setGameStarted(true); startTimer(); }}
+            onClick={() => {
+              setGameStarted(true);
+              if (hasSavedProgress) restoreProgress();
+              else startTimer();
+            }}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors text-lg"
           >
-            Start Puzzle
+            {hasSavedProgress ? 'Continue Puzzle' : 'Start Puzzle'}
           </button>
         </div>
       </div>

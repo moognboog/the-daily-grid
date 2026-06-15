@@ -45,6 +45,27 @@ export function getAverageTime() {
   return Math.round(times.reduce((a, b) => a + b, 0) / times.length);
 }
 
+const PROGRESS_KEY = 'cw_progress';
+
+export function getProgress(dateStr) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PROGRESS_KEY));
+    if (saved?.date !== dateStr) {
+      localStorage.removeItem(PROGRESS_KEY);
+      return null;
+    }
+    return saved;
+  } catch { return null; }
+}
+
+export function saveProgress(dateStr, inputs, elapsedSeconds) {
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify({ date: dateStr, inputs, elapsedSeconds }));
+}
+
+export function clearProgress() {
+  localStorage.removeItem(PROGRESS_KEY);
+}
+
 export function updateStreak(dateStr) {
   const player = getPlayer();
   if (!player) return;

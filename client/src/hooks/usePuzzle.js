@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { cellKey } from '../utils/format.js';
+import { getProgress, saveProgress } from '../utils/storage.js';
 
 function wordCellCoord(word, pos) {
   return word.direction === 'across'
@@ -65,6 +66,7 @@ export function usePuzzle() {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [savedProgress, setSavedProgress] = useState(null);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -77,6 +79,8 @@ export function usePuzzle() {
         const first = data.words[0];
         setCursorCell({ row: first.startRow, col: first.startCol });
         setSelectedWord(0);
+        const saved = getProgress(data.date);
+        if (saved) setSavedProgress(saved);
         setLoading(false);
       })
       .catch(err => {
@@ -92,6 +96,11 @@ export function usePuzzle() {
     }, 1000);
     return () => clearInterval(id);
   }, [timerStarted, isComplete]);
+
+  useEffect(() => {
+    if (!timerStarted || isComplete || !puzzle) return;
+    saveProgress(puzzle.date, inputs, elapsedSeconds);
+  }, [inputs]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const moveInWord = useCallback((row, col, wordIndex, delta, words) => {
     const word = words[wordIndex];
@@ -184,6 +193,14 @@ export function usePuzzle() {
     setTimerStarted(true);
   }
 
+  function restoreProgress() {
+    if (!savedProgress) return;
+    setInputs(savedProgress.inputs);
+    setElapsedSeconds(savedProgress.elapsedSeconds);
+    setTimerStarted(true);
+    setSavedProgress(null);
+  }
+
   return {
     puzzle,
     grid,
@@ -200,5 +217,7 @@ export function usePuzzle() {
     selectWord,
     handleKey,
     startTimer,
+    hasSavedProgress: !!savedProgress,
+    restoreProgress,
   };
 }
